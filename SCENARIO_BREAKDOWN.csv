@@ -1,0 +1,19 @@
+scenario_name,scenario_type,detector_config,trials,detected,mean_latency_ms,median_latency_ms,std_latency_ms,mean_files_damaged,mean_prevented_ops,mean_planned_ops,detection_rate,mean_prevented_ops_pct
+Bulk Copying,benign,baseline,10,0,,,,0.0,0.0,6.0,0.0,0.0
+Bulk Copying,benign,canary_only,10,0,,,,0.0,0.0,6.0,0.0,0.0
+Bulk Copying,benign,hybrid,10,0,,,,0.0,0.0,6.0,0.0,0.0
+Bulk Renaming,benign,baseline,10,10,271.299147605896,271.6195583343506,4.477965812488116,0.0,2.0,6.0,1.0,33.33333333333333
+Bulk Renaming,benign,canary_only,10,0,,,,0.0,0.0,6.0,0.0,0.0
+Bulk Renaming,benign,hybrid,10,0,,,,0.0,0.0,6.0,0.0,0.0
+Canary Touch + Rapid Bulk Modifications,suspicious,baseline,10,10,25.797271728515625,27.16958522796631,3.4660574811019558,0.0,11.0,12.0,1.0,91.66666666666666
+Canary Touch + Rapid Bulk Modifications,suspicious,canary_only,10,10,24.284720420837402,25.68185329437256,6.586836470212874,0.1,10.9,12.0,1.0,90.83333333333333
+Canary Touch + Rapid Bulk Modifications,suspicious,hybrid,10,10,26.10487937927246,25.77996253967285,8.432711190406895,0.1,10.9,12.0,1.0,90.83333333333333
+Canary Touch Without Suspicious Follow-up,benign,baseline,10,0,,,,0.0,0.0,4.0,0.0,0.0
+Canary Touch Without Suspicious Follow-up,benign,canary_only,10,10,13.482069969177246,15.123605728149414,4.170894541712614,0.0,3.0,4.0,1.0,75.0
+Canary Touch Without Suspicious Follow-up,benign,hybrid,10,0,,,,0.0,0.0,4.0,0.0,0.0
+Normal File Editing,benign,baseline,10,0,,,,0.0,0.0,5.0,0.0,0.0
+Normal File Editing,benign,canary_only,10,0,,,,0.0,0.0,5.0,0.0,0.0
+Normal File Editing,benign,hybrid,10,0,,,,0.0,0.0,5.0,0.0,0.0
+Rapid Bulk Modifications Without Canary,suspicious,baseline,10,10,144.0459966659546,141.96252822875977,6.173920299592751,6.1,3.9,10.0,1.0,39.0
+Rapid Bulk Modifications Without Canary,suspicious,canary_only,10,0,,,,10.0,0.0,10.0,0.0,0.0
+Rapid Bulk Modifications Without Canary,suspicious,hybrid,10,0,,,,10.0,0.0,10.0,0.0,0.0

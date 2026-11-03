@@ -1,0 +1,4 @@
+detector_config,true_positives,false_positives,true_negatives,false_negatives,total_trials,total_benign,actual_benign,actual_attacks
+baseline,20,10,30,0,60,20,40,20
+canary_only,10,10,30,10,60,20,40,20
+hybrid,10,0,40,10,60,20,40,20

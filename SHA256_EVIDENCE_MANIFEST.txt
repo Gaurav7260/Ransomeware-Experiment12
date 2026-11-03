@@ -1,0 +1,8 @@
+# CanarySentinel Raw Evidence — Cryptographic SHA-256 Manifest
+# Generated: 2026-11-03 18:14:41
+--------------------------------------------------------------------------------
+ada005249b4a6eae1efbcdb3db204a121fb954a47e52d3f55c76ae5548902241  RAW_EXPERIMENT_DATA_180.csv
+66f67d7009cfabf4ce308d7372fec963d85c68dd732730233d7f4620bcf640fa  canary_sentinel.db
+d0045574b595dd1b2991c3c2d34e326ab861e269eed0e6ce7d8baaab52f863ee  exports_alerts.csv
+50172efadb71ab24cbd37d9763a285605e4d0f38d25208aafe16b2211f197852  exports_events.csv
+a176be508270f296743d796ce3ed409162b3cb79fe1ccdae02e0921de60f9a19  exports_trials.csv

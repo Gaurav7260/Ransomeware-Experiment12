@@ -1,0 +1,5 @@
+Epoch,Time Interval,Executed Command,Trial Count,Event Count,Alert Count,Storage Location,Status
+Epoch 1 — Benchmark Suite,2026-11-02 12:58:28 to 13:01:08,python run_sentinel.py benchmark --iterations 10,180,1691,60,canary_sentinel.db (at time of run) -> exported to exports/trials.csv,Preserved as frozen academic benchmark dataset (RAW_EXPERIMENT_DATA.csv)
+Epoch 2 — Academic CSV Export,2026-11-02 13:01:23,python run_sentinel.py export --out-dir exports,180,1691,60,"exports/trials.csv, events.csv, alerts.csv",Permanent benchmark evidence artifact
+Epoch 3 — Ad-Hoc & Secondary Suite,2026-11-02 16:13:24 to 16:25:04,Ad-hoc trials + 4-iteration benchmark,76,725,25,canary_sentinel.db,Active operational database after reset
+Epoch 4 — Verification Trial,2026-11-02 16:41:26,Verification test (batch_id: batch_verification_test),1,5,0,canary_sentinel.db,Total database trials brought to 77

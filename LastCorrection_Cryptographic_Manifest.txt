@@ -1,0 +1,15 @@
+# CanarySentinel — LastCorrection Cryptographic Verification Manifest
+# Generated: 2026-11-03 18:14:00
+#-------------------------------------------------------------------------------
+8548244d822c32b3a1f462692924d0dda33d2a1e52b58ba90e9e884eb0ef05a1  LastCorrection_Academic_Reconciliation_Report.md
+155b9cc15f4cc03b3c0b7cbf46b039e7ea48525e16d5808549939da0d774cff5  LastCorrection_Statistical_Metrics.csv
+7b30f50bf8590862f57742ca19a28aec2be982df8f2b94923dd31d74ffcc9135  CanarySentinel_Final_Application.zip
+2ca519ca730408f3eeeb88523808581d41a4e2e7786a9a91d16f8b5d4e6e8c46  CanarySentinel_Final_Audit_Package.zip
+6bace6e1fa081bfd7e8913d9d60b9cba216676550cec6b1e841ed952cfec3455  FINAL_AUDIT_REPORT.md
+93741640753a054dcf4cd631537a3c865364a69b171c4796ec621c8256e29159  CORRECTED_STATISTICAL_ANALYSIS.md
+f002d6877db99623ed598be398e189c83dbbc74dc91d33f7a135a0ccc1746ebd  FINAL_TEST_EXECUTION_REPORT.md
+c06d8694726dfe307e10c9f0a91bc879281083415f8f9346fd8c2a03eb61d40d  UPDATED_EXPERIMENT_PROVENANCE_REPORT.md
+80e0a0372c05e352f9707b4019e7e36606717de251a9357b0495b73975ee9251  FINAL_CHANGELOG.md
+bc74ed47b23e3e3afb65f26fd44305ce9c16c4ca9a7decdcf8831630ee017f9a  PYTEST_CONSOLE_LOG.txt
+ada005249b4a6eae1efbcdb3db204a121fb954a47e52d3f55c76ae5548902241  research_dossier/03_EXPERIMENTAL_DATA/RAW_EXPERIMENT_DATA.csv
+66f67d7009cfabf4ce308d7372fec963d85c68dd732730233d7f4620bcf640fa  canary_sentinel.db

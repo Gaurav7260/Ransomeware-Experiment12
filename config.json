@@ -1,0 +1,69 @@
+{
+  "system": {
+    "app_name": "CanarySentinel",
+    "version": "1.0.0",
+    "sandbox_dir": "./sandbox",
+    "db_path": "./canary_sentinel.db",
+    "log_level": "INFO"
+  },
+  "canary": {
+    "decoy_count": 8,
+    "target_directories": [
+      "",
+      "documents",
+      "finance",
+      "projects",
+      "backups"
+    ],
+    "file_extensions": [
+      ".docx",
+      ".xlsx",
+      ".pdf",
+      ".sql",
+      ".csv",
+      ".txt"
+    ],
+    "naming_prefixes": [
+      "!00_",
+      "!aa_",
+      "aaa_",
+      "_urgent_",
+      "0_confidential_"
+    ]
+  },
+  "monitoring": {
+    "debounce_ms": 50,
+    "ignore_patterns": [
+      "*.tmp",
+      "*.swp",
+      ".DS_Store",
+      "*~"
+    ]
+  },
+  "detection": {
+    "baseline": {
+      "burst_window_seconds": 2.0,
+      "burst_count_threshold": 6,
+      "entropy_threshold": 7.0,
+      "mass_rename_threshold": 4,
+      "base_risk_score": 65
+    },
+    "canary_only": {
+      "monitored_events": ["MODIFY", "DELETE", "MOVE"],
+      "base_risk_score": 85
+    },
+    "hybrid": {
+      "observation_window_seconds": 3.0,
+      "min_context_events": 2,
+      "burst_velocity_threshold": 3.0,
+      "entropy_threshold": 6.8,
+      "base_risk_score": 95
+    }
+  },
+  "response": {
+    "auto_block": true,
+    "minimum_severity": "HIGH",
+    "risk_score_threshold": 70
+  }
+}
+

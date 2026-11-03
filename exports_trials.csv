@@ -1,0 +1,181 @@
+scenario_id,scenario_name,scenario_type,detector_config,start_time,end_time,duration_ms,planned_ops,executed_ops,prevented_ops,files_damaged,detected,detection_latency_ms,response_triggered,alert_id
+hybrid_rapid_bulk_without_canary_eefa16,Rapid Bulk Modifications Without Canary,suspicious,hybrid,1793604668.910728,1793604669.318105,407.3770046234131,10,10,0,10,False,,False,
+hybrid_canary_plus_rapid_bulk_846c70,Canary Touch + Rapid Bulk Modifications,suspicious,hybrid,1793604668.4390059,1793604668.629764,190.75822830200195,12,1,11,0,True,26.61418914794922,True,8b886a04-2d7c-4264-b383-27e4908b8b4e
+hybrid_canary_touch_benign_108570,Canary Touch Without Suspicious Follow-up,benign,hybrid,1793604666.783657,1793604668.1599848,1376.3277530670166,4,4,0,0,False,,False,
+hybrid_bulk_renaming_7c2745,Bulk Renaming,benign,hybrid,1793604665.841963,1793604666.5060391,664.0760898590088,6,6,0,0,False,,False,
+hybrid_bulk_copying_a7216b,Bulk Copying,benign,hybrid,1793604664.890196,1793604665.562603,672.4069118499756,6,6,0,0,False,,False,
+hybrid_normal_file_editing_7b9912,Normal File Editing,benign,hybrid,1793604663.847374,1793604664.630474,783.1001281738281,5,5,0,0,False,,False,
+canary_only_rapid_bulk_without_canary_d00400,Rapid Bulk Modifications Without Canary,suspicious,canary_only,1793604663.169811,1793604663.564895,395.0839042663574,10,10,0,10,False,,False,
+canary_only_canary_plus_rapid_bulk_6d56bf,Canary Touch + Rapid Bulk Modifications,suspicious,canary_only,1793604662.701621,1793604662.8918242,190.20318984985352,12,1,11,0,True,25.460004806518555,True,ffd37866-47d3-4703-8197-6ce2840bc2e3
+canary_only_canary_touch_benign_fe029d,Canary Touch Without Suspicious Follow-up,benign,canary_only,1793604661.9413362,1793604662.406654,465.3177261352539,4,1,3,0,True,18.172740936279297,True,aac563ec-d6ff-422d-861a-800e46c4f3d7
+canary_only_bulk_renaming_c61707,Bulk Renaming,benign,canary_only,1793604661.004407,1793604661.667131,662.7240180969238,6,6,0,0,False,,False,
+canary_only_bulk_copying_6a4b80,Bulk Copying,benign,canary_only,1793604660.052927,1793604660.726471,673.5439300537109,6,6,0,0,False,,False,
+canary_only_normal_file_editing_e28ed2,Normal File Editing,benign,canary_only,1793604658.990407,1793604659.766598,776.190996170044,5,5,0,0,False,,False,
+baseline_rapid_bulk_without_canary_7d9bb6,Rapid Bulk Modifications Without Canary,suspicious,baseline,1793604658.393177,1793604658.705853,312.67595291137695,10,6,4,6,True,143.9681053161621,True,2af76a62-8b6f-4727-a92a-83bc8b76acd7
+baseline_canary_plus_rapid_bulk_3ab3f6,Canary Touch + Rapid Bulk Modifications,suspicious,baseline,1793604657.918263,1793604658.10952,191.25699996948242,12,1,11,0,True,27.15301513671875,True,f46a4b98-19cd-4602-9209-4935c7028df7
+baseline_canary_touch_benign_a25fe3,Canary Touch Without Suspicious Follow-up,benign,baseline,1793604656.25565,1793604657.627674,1372.0240592956543,4,4,0,0,False,,False,
+baseline_bulk_renaming_79d3f9,Bulk Renaming,benign,baseline,1793604655.501346,1793604656.001247,499.90081787109375,6,4,2,0,True,268.9929008483887,True,2c6a00a5-0d2d-4196-8e5f-16c9acc9b45e
+baseline_bulk_copying_5fcc02,Bulk Copying,benign,baseline,1793604654.5526662,1793604655.215613,662.9467010498047,6,6,0,0,False,,False,
+baseline_normal_file_editing_a7babb,Normal File Editing,benign,baseline,1793604653.484879,1793604654.26969,784.8110198974609,5,5,0,0,False,,False,
+hybrid_rapid_bulk_without_canary_f47164,Rapid Bulk Modifications Without Canary,suspicious,hybrid,1793604652.79281,1793604653.202611,409.8010063171387,10,10,0,10,False,,False,
+hybrid_canary_plus_rapid_bulk_10bf4a,Canary Touch + Rapid Bulk Modifications,suspicious,hybrid,1793604652.3194618,1793604652.510547,191.0851001739502,12,1,11,0,True,25.625228881835938,True,3282d8d1-3938-44f5-b426-4245bf943dd4
+hybrid_canary_touch_benign_3fc5f0,Canary Touch Without Suspicious Follow-up,benign,hybrid,1793604650.660991,1793604652.038966,1377.9749870300293,4,4,0,0,False,,False,
+hybrid_bulk_renaming_22ed14,Bulk Renaming,benign,hybrid,1793604649.712429,1793604650.379512,667.0830249786377,6,6,0,0,False,,False,
+hybrid_bulk_copying_137c3b,Bulk Copying,benign,hybrid,1793604648.777245,1793604649.447797,670.5520153045654,6,6,0,0,False,,False,
+hybrid_normal_file_editing_9e4e1c,Normal File Editing,benign,hybrid,1793604647.719007,1793604648.497716,778.7089347839355,5,5,0,0,False,,False,
+canary_only_rapid_bulk_without_canary_96ab8e,Rapid Bulk Modifications Without Canary,suspicious,canary_only,1793604647.0340521,1793604647.437384,403.3317565917969,10,10,0,10,False,,False,
+canary_only_canary_plus_rapid_bulk_744251,Canary Touch + Rapid Bulk Modifications,suspicious,canary_only,1793604646.5881019,1793604646.767518,179.41617965698242,12,1,11,0,True,15.848159790039062,True,e9915a77-0e05-4aa3-84c2-d80f144f174b
+canary_only_canary_touch_benign_7d8bcd,Canary Touch Without Suspicious Follow-up,benign,canary_only,1793604645.850115,1793604646.309912,459.7969055175781,4,1,3,0,True,16.41988754272461,True,a7dc2845-01eb-4e1d-9717-0cedcbaad087
+canary_only_bulk_renaming_8c34c2,Bulk Renaming,benign,canary_only,1793604644.906362,1793604645.5657752,659.4130992889404,6,6,0,0,False,,False,
+canary_only_bulk_copying_6eac67,Bulk Copying,benign,canary_only,1793604643.95423,1793604644.624351,670.1209545135498,6,6,0,0,False,,False,
+canary_only_normal_file_editing_e9c434,Normal File Editing,benign,canary_only,1793604642.886366,1793604643.671207,784.8410606384277,5,5,0,0,False,,False,
+baseline_rapid_bulk_without_canary_3716b8,Rapid Bulk Modifications Without Canary,suspicious,baseline,1793604642.291877,1793604642.602834,310.9569549560547,10,6,4,6,True,142.27700233459473,True,2205c1e8-286f-4cb0-8b13-7e77b07aacff
+baseline_canary_plus_rapid_bulk_cde394,Canary Touch + Rapid Bulk Modifications,suspicious,baseline,1793604641.815166,1793604642.007673,192.5070285797119,12,1,11,0,True,27.186155319213867,True,b0a8dae2-bb84-4cab-8be9-ff06891a84ea
+baseline_canary_touch_benign_12b984,Canary Touch Without Suspicious Follow-up,benign,baseline,1793604640.1574242,1793604641.5312572,1373.8329410552979,4,4,0,0,False,,False,
+baseline_bulk_renaming_2bff6c,Bulk Renaming,benign,baseline,1793604639.374272,1793604639.867148,492.8758144378662,6,4,2,0,True,271.6090679168701,True,deb12b24-4f4d-45d8-9ee8-e717aa5517c7
+baseline_bulk_copying_5caad1,Bulk Copying,benign,baseline,1793604638.4192488,1793604639.089588,670.3391075134277,6,6,0,0,False,,False,
+baseline_normal_file_editing_1f2423,Normal File Editing,benign,baseline,1793604637.3520482,1793604638.132421,780.3728580474854,5,5,0,0,False,,False,
+hybrid_rapid_bulk_without_canary_3a5e79,Rapid Bulk Modifications Without Canary,suspicious,hybrid,1793604636.6609879,1793604637.070673,409.6851348876953,10,10,0,10,False,,False,
+hybrid_canary_plus_rapid_bulk_43b2a0,Canary Touch + Rapid Bulk Modifications,suspicious,hybrid,1793604636.205416,1793604636.3797529,174.33691024780273,12,1,11,0,True,15.758991241455078,True,d1144a54-1dca-4838-87e5-cbf53575cb5c
+hybrid_canary_touch_benign_4f8482,Canary Touch Without Suspicious Follow-up,benign,hybrid,1793604634.541386,1793604635.922357,1380.9711933135986,4,4,0,0,False,,False,
+hybrid_bulk_renaming_e2cd08,Bulk Renaming,benign,hybrid,1793604633.582263,1793604634.261085,678.8220405578613,6,6,0,0,False,,False,
+hybrid_bulk_copying_a65097,Bulk Copying,benign,hybrid,1793604632.6361449,1793604633.305126,668.9810752868652,6,6,0,0,False,,False,
+hybrid_normal_file_editing_642dd3,Normal File Editing,benign,hybrid,1793604631.569122,1793604632.355704,786.5819931030273,5,5,0,0,False,,False,
+canary_only_rapid_bulk_without_canary_25c4f1,Rapid Bulk Modifications Without Canary,suspicious,canary_only,1793604630.8767612,1793604631.2873201,410.55893898010254,10,10,0,10,False,,False,
+canary_only_canary_plus_rapid_bulk_82557b,Canary Touch + Rapid Bulk Modifications,suspicious,canary_only,1793604630.3749251,1793604630.594124,219.19894218444824,12,2,10,1,True,38.095712661743164,True,f83486e3-6b17-4d2d-99f4-8b6ed37be0c7
+canary_only_canary_touch_benign_9cfcee,Canary Touch Without Suspicious Follow-up,benign,canary_only,1793604629.640308,1793604630.097901,457.5932025909424,4,1,3,0,True,6.832122802734375,True,2a727765-bfa3-465d-b09d-afb923e2cc04
+canary_only_bulk_renaming_6261c1,Bulk Renaming,benign,canary_only,1793604628.6989539,1793604629.364918,665.9641265869141,6,6,0,0,False,,False,
+canary_only_bulk_copying_be0e2f,Bulk Copying,benign,canary_only,1793604627.750459,1793604628.416953,666.4941310882568,6,6,0,0,False,,False,
+canary_only_normal_file_editing_73ccb0,Normal File Editing,benign,canary_only,1793604626.690748,1793604627.463553,772.8049755096436,5,5,0,0,False,,False,
+baseline_rapid_bulk_without_canary_dc42bb,Rapid Bulk Modifications Without Canary,suspicious,baseline,1793604626.08388,1793604626.410732,326.85208320617676,10,6,4,6,True,159.86394882202148,True,e4289d1a-9711-4fce-93ca-44e7ad87d0d9
+baseline_canary_plus_rapid_bulk_cececf,Canary Touch + Rapid Bulk Modifications,suspicious,baseline,1793604625.6153731,1793604625.804539,189.16583061218262,12,1,11,0,True,24.663925170898438,True,fb2830c3-4d7d-49ac-85de-abf451269123
+baseline_canary_touch_benign_e9ef08,Canary Touch Without Suspicious Follow-up,benign,baseline,1793604623.971276,1793604625.3445702,1373.2941150665283,4,4,0,0,False,,False,
+baseline_bulk_renaming_425bd9,Bulk Renaming,benign,baseline,1793604623.205974,1793604623.701864,495.88990211486816,6,4,2,0,True,271.63004875183105,True,147f264d-35de-465e-84f9-9836f164f93a
+baseline_bulk_copying_0aba04,Bulk Copying,benign,baseline,1793604622.2585049,1793604622.927319,668.8141822814941,6,6,0,0,False,,False,
+baseline_normal_file_editing_c68e18,Normal File Editing,benign,baseline,1793604621.2155368,1793604621.995181,779.644250869751,5,5,0,0,False,,False,
+hybrid_rapid_bulk_without_canary_e50ec4,Rapid Bulk Modifications Without Canary,suspicious,hybrid,1793604620.549829,1793604620.955619,405.7900905609131,10,10,0,10,False,,False,
+hybrid_canary_plus_rapid_bulk_054323,Canary Touch + Rapid Bulk Modifications,suspicious,hybrid,1793604620.109876,1793604620.28898,179.10408973693848,12,1,11,0,True,16.92509651184082,True,5a4c5f72-bc3c-41f5-a3c7-f522d7a874f6
+hybrid_canary_touch_benign_93c4be,Canary Touch Without Suspicious Follow-up,benign,hybrid,1793604618.477132,1793604619.8524249,1375.2927780151367,4,4,0,0,False,,False,
+hybrid_bulk_renaming_c39426,Bulk Renaming,benign,hybrid,1793604617.555346,1793604618.222045,666.6989326477051,6,6,0,0,False,,False,
+hybrid_bulk_copying_5145ce,Bulk Copying,benign,hybrid,1793604616.622323,1793604617.288018,665.6949520111084,6,6,0,0,False,,False,
+hybrid_normal_file_editing_77ba26,Normal File Editing,benign,hybrid,1793604615.5794299,1793604616.3596082,780.1783084869385,5,5,0,0,False,,False,
+canary_only_rapid_bulk_without_canary_613478,Rapid Bulk Modifications Without Canary,suspicious,canary_only,1793604614.891318,1793604615.298697,407.3789119720459,10,10,0,10,False,,False,
+canary_only_canary_plus_rapid_bulk_c345d3,Canary Touch + Rapid Bulk Modifications,suspicious,canary_only,1793604614.44012,1793604614.623392,183.272123336792,12,1,11,0,True,15.48004150390625,True,17e09909-24d3-4af0-a383-ae043b45afe4
+canary_only_canary_touch_benign_d4c868,Canary Touch Without Suspicious Follow-up,benign,canary_only,1793604613.718026,1793604614.180178,462.15200424194336,4,1,3,0,True,11.913061141967773,True,395cd67c-7013-4eb2-a816-c8c8a2c788f1
+canary_only_bulk_renaming_c5bc72,Bulk Renaming,benign,canary_only,1793604612.789011,1793604613.455661,666.6500568389893,6,6,0,0,False,,False,
+canary_only_bulk_copying_ad62e7,Bulk Copying,benign,canary_only,1793604611.8178802,1793604612.5057678,687.8876686096191,6,6,0,0,False,,False,
+canary_only_normal_file_editing_822f35,Normal File Editing,benign,canary_only,1793604610.752699,1793604611.532555,779.8562049865723,5,5,0,0,False,,False,
+baseline_rapid_bulk_without_canary_215ea2,Rapid Bulk Modifications Without Canary,suspicious,baseline,1793604610.1214662,1793604610.466112,344.64573860168457,10,7,3,7,True,148.26703071594238,True,806efc48-401e-42bb-bdb8-97561d6f2445
+baseline_canary_plus_rapid_bulk_664ee6,Canary Touch + Rapid Bulk Modifications,suspicious,baseline,1793604609.6556742,1793604609.8391192,183.44497680664062,12,1,11,0,True,25.948762893676758,True,4b5ab4a0-7b54-43f3-ac27-29d33576e0ff
+baseline_canary_touch_benign_203f9e,Canary Touch Without Suspicious Follow-up,benign,baseline,1793604607.989037,1793604609.363061,1374.0239143371582,4,4,0,0,False,,False,
+baseline_bulk_renaming_ac817d,Bulk Renaming,benign,baseline,1793604607.212995,1793604607.705763,492.7680492401123,6,4,2,0,True,270.62201499938965,True,964b18d8-ee77-49ae-bed1-4ec70394e79f
+baseline_bulk_copying_c3df15,Bulk Copying,benign,baseline,1793604606.263791,1793604606.930869,667.0780181884766,6,6,0,0,False,,False,
+baseline_normal_file_editing_1347aa,Normal File Editing,benign,baseline,1793604605.1999118,1793604605.9801059,780.1940441131592,5,5,0,0,False,,False,
+hybrid_rapid_bulk_without_canary_e68038,Rapid Bulk Modifications Without Canary,suspicious,hybrid,1793604604.523329,1793604604.922386,399.05691146850586,10,10,0,10,False,,False,
+hybrid_canary_plus_rapid_bulk_faf2ea,Canary Touch + Rapid Bulk Modifications,suspicious,hybrid,1793604604.0471199,1793604604.239987,192.86704063415527,12,1,11,0,True,28.746366500854492,True,080bd659-6667-4095-bd8a-7a3ff747bfc8
+hybrid_canary_touch_benign_74ed23,Canary Touch Without Suspicious Follow-up,benign,hybrid,1793604602.394512,1793604603.764406,1369.894027709961,4,4,0,0,False,,False,
+hybrid_bulk_renaming_679603,Bulk Renaming,benign,hybrid,1793604601.453587,1793604602.118749,665.1618480682373,6,6,0,0,False,,False,
+hybrid_bulk_copying_96be1a,Bulk Copying,benign,hybrid,1793604600.503882,1793604601.174401,670.5191135406494,6,6,0,0,False,,False,
+hybrid_normal_file_editing_d48d5c,Normal File Editing,benign,hybrid,1793604599.439121,1793604600.222475,783.3540439605713,5,5,0,0,False,,False,
+canary_only_rapid_bulk_without_canary_32b5ff,Rapid Bulk Modifications Without Canary,suspicious,canary_only,1793604598.7539961,1793604599.159349,405.3528308868408,10,10,0,10,False,,False,
+canary_only_canary_plus_rapid_bulk_d9057a,Canary Touch + Rapid Bulk Modifications,suspicious,canary_only,1793604598.301409,1793604598.4881291,186.7201328277588,12,1,11,0,True,21.690845489501953,True,a9acdd1c-dc8d-4331-9c81-520c2e188a62
+canary_only_canary_touch_benign_6f47a9,Canary Touch Without Suspicious Follow-up,benign,canary_only,1793604597.557099,1793604598.018364,461.26484870910645,4,1,3,0,True,15.146970748901367,True,16a32275-85c3-4ae1-af67-c2bd271198bf
+canary_only_bulk_renaming_27da67,Bulk Renaming,benign,canary_only,1793604596.6115851,1793604597.275041,663.4559631347656,6,6,0,0,False,,False,
+canary_only_bulk_copying_329bc7,Bulk Copying,benign,canary_only,1793604595.646338,1793604596.315404,669.0659523010254,6,6,0,0,False,,False,
+canary_only_normal_file_editing_80258c,Normal File Editing,benign,canary_only,1793604594.582687,1793604595.3629289,780.2419662475586,5,5,0,0,False,,False,
+baseline_rapid_bulk_without_canary_09856d,Rapid Bulk Modifications Without Canary,suspicious,baseline,1793604593.998373,1793604594.302745,304.37207221984863,10,6,4,6,True,138.66496086120605,True,a5ab5f3f-a1e3-40cf-8bbe-218b57a2bdf3
+baseline_canary_plus_rapid_bulk_9fddd0,Canary Touch + Rapid Bulk Modifications,suspicious,baseline,1793604593.527887,1793604593.71296,185.0728988647461,12,1,11,0,True,18.84603500366211,True,423b9d7a-c080-4c7c-81f8-3f5b73508662
+baseline_canary_touch_benign_cd6ffc,Canary Touch Without Suspicious Follow-up,benign,baseline,1793604591.873947,1793604593.245416,1371.4690208435059,4,4,0,0,False,,False,
+baseline_bulk_renaming_ab5efe,Bulk Renaming,benign,baseline,1793604591.0954618,1793604591.5943098,498.84796142578125,6,4,2,0,True,274.9302387237549,True,aac87712-cdca-4373-a31e-81c11864ed90
+baseline_bulk_copying_335f2d,Bulk Copying,benign,baseline,1793604590.141174,1793604590.812194,671.0200309753418,6,6,0,0,False,,False,
+baseline_normal_file_editing_dad284,Normal File Editing,benign,baseline,1793604589.080682,1793604589.85864,777.9579162597656,5,5,0,0,False,,False,
+hybrid_rapid_bulk_without_canary_12188d,Rapid Bulk Modifications Without Canary,suspicious,hybrid,1793604588.398474,1793604588.801656,403.1820297241211,10,10,0,10,False,,False,
+hybrid_canary_plus_rapid_bulk_6c124f,Canary Touch + Rapid Bulk Modifications,suspicious,hybrid,1793604587.926532,1793604588.117577,191.04504585266113,12,1,11,0,True,26.109933853149414,True,13774b81-2193-4dc7-be09-722e18db370e
+hybrid_canary_touch_benign_d151e6,Canary Touch Without Suspicious Follow-up,benign,hybrid,1793604586.268919,1793604587.6442082,1375.2892017364502,4,4,0,0,False,,False,
+hybrid_bulk_renaming_32d68f,Bulk Renaming,benign,hybrid,1793604585.294762,1793604585.95929,664.5281314849854,6,6,0,0,False,,False,
+hybrid_bulk_copying_7a7ec1,Bulk Copying,benign,hybrid,1793604584.340947,1793604585.010891,669.9440479278564,6,6,0,0,False,,False,
+hybrid_normal_file_editing_df9a9c,Normal File Editing,benign,hybrid,1793604583.28074,1793604584.062091,781.3510894775391,5,5,0,0,False,,False,
+canary_only_rapid_bulk_without_canary_c218ea,Rapid Bulk Modifications Without Canary,suspicious,canary_only,1793604582.5982761,1793604583.00546,407.1838855743408,10,10,0,10,False,,False,
+canary_only_canary_plus_rapid_bulk_ba8bd0,Canary Touch + Rapid Bulk Modifications,suspicious,canary_only,1793604582.13886,1793604582.31934,180.4800033569336,12,1,11,0,True,19.82903480529785,True,4096d007-7497-462b-9e4f-be67aefbefd5
+canary_only_canary_touch_benign_1e878d,Canary Touch Without Suspicious Follow-up,benign,canary_only,1793604581.396193,1793604581.85572,459.52701568603516,4,1,3,0,True,15.298128128051758,True,d98b884b-ac3e-48ef-998b-bd0ff3efb042
+canary_only_bulk_renaming_e713b3,Bulk Renaming,benign,canary_only,1793604580.448093,1793604581.114862,666.7690277099609,6,6,0,0,False,,False,
+canary_only_bulk_copying_64c40a,Bulk Copying,benign,canary_only,1793604579.498683,1793604580.168663,669.9800491333008,6,6,0,0,False,,False,
+canary_only_normal_file_editing_82f96d,Normal File Editing,benign,canary_only,1793604578.4280791,1793604579.205836,777.756929397583,5,5,0,0,False,,False,
+baseline_rapid_bulk_without_canary_e2745f,Rapid Bulk Modifications Without Canary,suspicious,baseline,1793604577.8314729,1793604578.144095,312.6220703125,10,6,4,6,True,143.97811889648438,True,35bf8bac-0e76-4e9f-8918-c6ce448a8eac
+baseline_canary_plus_rapid_bulk_756ec5,Canary Touch + Rapid Bulk Modifications,suspicious,baseline,1793604577.361624,1793604577.5493581,187.73412704467773,12,1,11,0,True,27.298927307128906,True,8fce7a70-d614-4282-98e7-37fa6721a3d3
+baseline_canary_touch_benign_041414,Canary Touch Without Suspicious Follow-up,benign,baseline,1793604575.703347,1793604577.0828621,1379.5151710510254,4,4,0,0,False,,False,
+baseline_bulk_renaming_9d7ffe,Bulk Renaming,benign,baseline,1793604574.9410088,1793604575.426465,485.4562282562256,6,4,2,0,True,263.6432647705078,True,13ddd58d-eee4-4242-831b-24be76e44f41
+baseline_bulk_copying_bebac0,Bulk Copying,benign,baseline,1793604573.988439,1793604574.660317,671.8778610229492,6,6,0,0,False,,False,
+baseline_normal_file_editing_d30dcd,Normal File Editing,benign,baseline,1793604572.925845,1793604573.70465,778.8050174713135,5,5,0,0,False,,False,
+hybrid_rapid_bulk_without_canary_2f94d3,Rapid Bulk Modifications Without Canary,suspicious,hybrid,1793604572.2320518,1793604572.6437309,411.6790294647217,10,10,0,10,False,,False,
+hybrid_canary_plus_rapid_bulk_0df6f6,Canary Touch + Rapid Bulk Modifications,suspicious,hybrid,1793604571.7249951,1793604571.949889,224.89380836486816,12,2,10,1,True,46.85187339782715,True,7c11e48e-cac3-4e67-9065-1bdb3e7c6bc5
+hybrid_canary_touch_benign_8d3321,Canary Touch Without Suspicious Follow-up,benign,hybrid,1793604570.0780349,1793604571.446332,1368.2971000671387,4,4,0,0,False,,False,
+hybrid_bulk_renaming_c29dcd,Bulk Renaming,benign,hybrid,1793604569.142786,1793604569.8080661,665.2801036834717,6,6,0,0,False,,False,
+hybrid_bulk_copying_84be50,Bulk Copying,benign,hybrid,1793604568.181507,1793604568.858698,677.1907806396484,6,6,0,0,False,,False,
+hybrid_normal_file_editing_8aa82b,Normal File Editing,benign,hybrid,1793604567.123989,1793604567.907788,783.7989330291748,5,5,0,0,False,,False,
+canary_only_rapid_bulk_without_canary_f159a2,Rapid Bulk Modifications Without Canary,suspicious,canary_only,1793604566.441189,1793604566.841582,400.393009185791,10,10,0,10,False,,False,
+canary_only_canary_plus_rapid_bulk_856948,Canary Touch + Rapid Bulk Modifications,suspicious,canary_only,1793604565.957868,1793604566.1475542,189.68605995178223,12,1,11,0,True,25.903701782226562,True,6ea0d21c-5cee-4930-bc50-3118488c68cf
+canary_only_canary_touch_benign_fe65b1,Canary Touch Without Suspicious Follow-up,benign,canary_only,1793604565.215293,1793604565.67756,462.2671604156494,4,1,3,0,True,15.100240707397461,True,9655b6ea-cca7-420c-86f5-13eca6eb9471
+canary_only_bulk_renaming_799b1f,Bulk Renaming,benign,canary_only,1793604564.279663,1793604564.935731,656.0678482055664,6,6,0,0,False,,False,
+canary_only_bulk_copying_ec0b5f,Bulk Copying,benign,canary_only,1793604563.326349,1793604563.9969752,670.626163482666,6,6,0,0,False,,False,
+canary_only_normal_file_editing_2c11ac,Normal File Editing,benign,canary_only,1793604562.2880619,1793604563.070994,782.9320430755615,5,5,0,0,False,,False,
+baseline_rapid_bulk_without_canary_7b884d,Rapid Bulk Modifications Without Canary,suspicious,baseline,1793604561.694263,1793604562.0031538,308.89081954956055,10,6,4,6,True,140.23089408874512,True,680a5d59-b59c-4a74-80c9-b1a88a2caec1
+baseline_canary_plus_rapid_bulk_9df2c9,Canary Touch + Rapid Bulk Modifications,suspicious,baseline,1793604561.221531,1793604561.412965,191.43414497375488,12,1,11,0,True,29.078006744384766,True,54f50f6a-ac4f-4838-ae87-746247b01d83
+baseline_canary_touch_benign_bdd31b,Canary Touch Without Suspicious Follow-up,benign,baseline,1793604559.5576231,1793604560.939061,1381.4377784729004,4,4,0,0,False,,False,
+baseline_bulk_renaming_6769c0,Bulk Renaming,benign,baseline,1793604558.775734,1793604559.277879,502.14505195617676,6,4,2,0,True,276.4849662780762,True,1358bc4a-6092-4490-98f2-cb8916219fe3
+baseline_bulk_copying_101418,Bulk Copying,benign,baseline,1793604557.824812,1793604558.4939148,669.1029071807861,6,6,0,0,False,,False,
+baseline_normal_file_editing_7ab4e9,Normal File Editing,benign,baseline,1793604556.763081,1793604557.543974,780.8928489685059,5,5,0,0,False,,False,
+hybrid_rapid_bulk_without_canary_e2c113,Rapid Bulk Modifications Without Canary,suspicious,hybrid,1793604556.080658,1793604556.4852312,404.5732021331787,10,10,0,10,False,,False,
+hybrid_canary_plus_rapid_bulk_bd3aa1,Canary Touch + Rapid Bulk Modifications,suspicious,hybrid,1793604555.6110961,1793604555.798218,187.12186813354492,12,1,11,0,True,25.6650447845459,True,1d6b6075-e1ed-44d5-81cf-b989de8e9a1f
+hybrid_canary_touch_benign_5e805d,Canary Touch Without Suspicious Follow-up,benign,hybrid,1793604553.9539251,1793604555.333184,1379.2588710784912,4,4,0,0,False,,False,
+hybrid_bulk_renaming_d70947,Bulk Renaming,benign,hybrid,1793604552.989624,1793604553.653731,664.107084274292,6,6,0,0,False,,False,
+hybrid_bulk_copying_731056,Bulk Copying,benign,hybrid,1793604552.030001,1793604552.705214,675.213098526001,6,6,0,0,False,,False,
+hybrid_normal_file_editing_41e585,Normal File Editing,benign,hybrid,1793604550.9684842,1793604551.751078,782.5937271118164,5,5,0,0,False,,False,
+canary_only_rapid_bulk_without_canary_933230,Rapid Bulk Modifications Without Canary,suspicious,canary_only,1793604550.282767,1793604550.686613,403.84602546691895,10,10,0,10,False,,False,
+canary_only_canary_plus_rapid_bulk_eaba57,Canary Touch + Rapid Bulk Modifications,suspicious,canary_only,1793604549.809653,1793604550.001108,191.45488739013672,12,1,11,0,True,26.633024215698242,True,2c74d940-f906-4b07-aaeb-dacfb91ec11e
+canary_only_canary_touch_benign_69b997,Canary Touch Without Suspicious Follow-up,benign,canary_only,1793604549.067013,1793604549.525644,458.6310386657715,4,1,3,0,True,15.913009643554688,True,fc2b77fc-53ce-48c6-b453-2c28c92c994a
+canary_only_bulk_renaming_86cf0f,Bulk Renaming,benign,canary_only,1793604548.124189,1793604548.784485,660.2962017059326,6,6,0,0,False,,False,
+canary_only_bulk_copying_ba1f83,Bulk Copying,benign,canary_only,1793604547.167975,1793604547.841161,673.1860637664795,6,6,0,0,False,,False,
+canary_only_normal_file_editing_e4fc3c,Normal File Editing,benign,canary_only,1793604546.108212,1793604546.884886,776.6740322113037,5,5,0,0,False,,False,
+baseline_rapid_bulk_without_canary_bc08b1,Rapid Bulk Modifications Without Canary,suspicious,baseline,1793604545.518516,1793604545.824745,306.2288761138916,10,6,4,6,True,141.58987998962402,True,b7001f8e-e03b-407d-a1af-22f0a94bfd22
+baseline_canary_plus_rapid_bulk_18e328,Canary Touch + Rapid Bulk Modifications,suspicious,baseline,1793604545.051925,1793604545.236825,184.90004539489746,12,1,11,0,True,20.721912384033203,True,83839244-dfa2-4af8-a063-b547d79a34b3
+baseline_canary_touch_benign_3e7d4e,Canary Touch Without Suspicious Follow-up,benign,baseline,1793604543.423763,1793604544.801476,1377.7129650115967,4,4,0,0,False,,False,
+baseline_bulk_renaming_e37edc,Bulk Renaming,benign,baseline,1793604542.6464179,1793604543.139105,492.6872253417969,6,4,2,0,True,275.7241725921631,True,44c89656-60c1-4163-9e90-cf23ecaed80c
+baseline_bulk_copying_7a24c3,Bulk Copying,benign,baseline,1793604541.690161,1793604542.3656929,675.5318641662598,6,6,0,0,False,,False,
+baseline_normal_file_editing_21ab29,Normal File Editing,benign,baseline,1793604540.648404,1793604541.43021,781.806230545044,5,5,0,0,False,,False,
+hybrid_rapid_bulk_without_canary_4727db,Rapid Bulk Modifications Without Canary,suspicious,hybrid,1793604539.975822,1793604540.3672361,391.4141654968262,10,10,0,10,False,,False,
+hybrid_canary_plus_rapid_bulk_6cbf50,Canary Touch + Rapid Bulk Modifications,suspicious,hybrid,1793604539.5162408,1793604539.701895,185.6541633605957,12,1,11,0,True,22.857189178466797,True,fdedbdd0-ea76-4e07-a163-2b1c3f945643
+hybrid_canary_touch_benign_dcb604,Canary Touch Without Suspicious Follow-up,benign,hybrid,1793604537.858355,1793604539.232766,1374.41086769104,4,4,0,0,False,,False,
+hybrid_bulk_renaming_b8d029,Bulk Renaming,benign,hybrid,1793604536.9054651,1793604537.578579,673.1138229370117,6,6,0,0,False,,False,
+hybrid_bulk_copying_f3fdda,Bulk Copying,benign,hybrid,1793604535.9416971,1793604536.621356,679.6588897705078,6,6,0,0,False,,False,
+hybrid_normal_file_editing_3c8dce,Normal File Editing,benign,hybrid,1793604534.8856168,1793604535.659775,774.158239364624,5,5,0,0,False,,False,
+canary_only_rapid_bulk_without_canary_0e8cd4,Rapid Bulk Modifications Without Canary,suspicious,canary_only,1793604534.190857,1793604534.598745,407.88817405700684,10,10,0,10,False,,False,
+canary_only_canary_plus_rapid_bulk_3a2ab8,Canary Touch + Rapid Bulk Modifications,suspicious,canary_only,1793604533.714637,1793604533.9070468,192.40975379943848,12,1,11,0,True,26.363849639892578,True,ce0d992b-6ac9-4bfa-8416-bb652a12d62f
+canary_only_canary_touch_benign_afb74d,Canary Touch Without Suspicious Follow-up,benign,canary_only,1793604532.976852,1793604533.433814,456.96210861206055,4,1,3,0,True,5.508184432983398,True,15201d12-ad6e-47b2-a1e3-177b482e5ccf
+canary_only_bulk_renaming_2bb078,Bulk Renaming,benign,canary_only,1793604532.030174,1793604532.6945322,664.3581390380859,6,6,0,0,False,,False,
+canary_only_bulk_copying_9e1f30,Bulk Copying,benign,canary_only,1793604531.073792,1793604531.747421,673.6290454864502,6,6,0,0,False,,False,
+canary_only_normal_file_editing_53aacb,Normal File Editing,benign,canary_only,1793604530.011979,1793604530.79006,778.080940246582,5,5,0,0,False,,False,
+baseline_rapid_bulk_without_canary_56bea7,Rapid Bulk Modifications Without Canary,suspicious,baseline,1793604529.434741,1793604529.745564,310.8229637145996,10,6,4,6,True,141.6480541229248,True,d6c7afc2-909a-4d09-a538-4ecee7cca2f0
+baseline_canary_plus_rapid_bulk_294735,Canary Touch + Rapid Bulk Modifications,suspicious,baseline,1793604528.965885,1793604529.1535249,187.63995170593262,12,1,11,0,True,27.857065200805664,True,4a060b60-fd55-4883-8c51-d1f9145b87c6
+baseline_canary_touch_benign_14f006,Canary Touch Without Suspicious Follow-up,benign,baseline,1793604527.315809,1793604528.6891048,1373.295783996582,4,4,0,0,False,,False,
+baseline_bulk_renaming_9144ec,Bulk Renaming,benign,baseline,1793604526.538655,1793604527.0318909,493.23582649230957,6,4,2,0,True,264.6298408508301,True,e2c4e5c6-7ae7-4aae-9ec2-83b86680328c
+baseline_bulk_copying_043471,Bulk Copying,benign,baseline,1793604525.5927339,1793604526.2607172,667.9832935333252,6,6,0,0,False,,False,
+baseline_normal_file_editing_f19537,Normal File Editing,benign,baseline,1793604524.5303848,1793604525.30958,779.1953086853027,5,5,0,0,False,,False,
+hybrid_rapid_bulk_without_canary_57954a,Rapid Bulk Modifications Without Canary,suspicious,hybrid,1793604523.8402638,1793604524.2496939,409.43002700805664,10,10,0,10,False,,False,
+hybrid_canary_plus_rapid_bulk_bd9f32,Canary Touch + Rapid Bulk Modifications,suspicious,hybrid,1793604523.363946,1793604523.554667,190.7210350036621,12,1,11,0,True,25.894880294799805,True,c7c08d37-423a-47c0-b212-53329de207cd
+hybrid_canary_touch_benign_042c62,Canary Touch Without Suspicious Follow-up,benign,hybrid,1793604521.7260401,1793604523.100776,1374.7358322143555,4,4,0,0,False,,False,
+hybrid_bulk_renaming_cf0492,Bulk Renaming,benign,hybrid,1793604520.788546,1793604521.453282,664.7360324859619,6,6,0,0,False,,False,
+hybrid_bulk_copying_849eb5,Bulk Copying,benign,hybrid,1793604519.857415,1793604520.524339,666.923999786377,6,6,0,0,False,,False,
+hybrid_normal_file_editing_27896f,Normal File Editing,benign,hybrid,1793604518.800852,1793604519.574966,774.1138935089111,5,5,0,0,False,,False,
+canary_only_rapid_bulk_without_canary_0faffa,Rapid Bulk Modifications Without Canary,suspicious,canary_only,1793604518.096249,1793604518.523544,427.2949695587158,10,10,0,10,False,,False,
+canary_only_canary_plus_rapid_bulk_0891a8,Canary Touch + Rapid Bulk Modifications,suspicious,canary_only,1793604517.6228192,1793604517.810245,187.4258518218994,12,1,11,0,True,27.542829513549805,True,8f9fc8ad-23ce-41c0-9dcb-46a602fc22ca
+canary_only_canary_touch_benign_9bdca3,Canary Touch Without Suspicious Follow-up,benign,canary_only,1793604516.8851259,1793604517.3439841,458.8582515716553,4,1,3,0,True,14.516353607177734,True,c9ab1862-b6ca-4564-94f7-83526cf58e72
+canary_only_bulk_renaming_b0ecbd,Bulk Renaming,benign,canary_only,1793604515.941403,1793604516.607014,665.6110286712646,6,6,0,0,False,,False,
+canary_only_bulk_copying_3902f7,Bulk Copying,benign,canary_only,1793604514.9762208,1793604515.655144,678.9231300354004,6,6,0,0,False,,False,
+canary_only_normal_file_editing_68d3c7,Normal File Editing,benign,canary_only,1793604513.911919,1793604514.6949818,783.0626964569092,5,5,0,0,False,,False,
+baseline_rapid_bulk_without_canary_0f23c0,Rapid Bulk Modifications Without Canary,suspicious,baseline,1793604513.32005,1793604513.6269078,306.8578243255615,10,6,4,6,True,139.97197151184082,True,cfdcebfe-22df-40e2-811a-f42d32af2bfa
+baseline_canary_plus_rapid_bulk_eb4ab4,Canary Touch + Rapid Bulk Modifications,suspicious,baseline,1793604512.8475862,1793604513.038126,190.53983688354492,12,1,11,0,True,29.21891212463379,True,7df6ecc0-2755-4cf6-bba2-94e7a78bf1cf
+baseline_canary_touch_benign_ed7706,Canary Touch Without Suspicious Follow-up,benign,baseline,1793604511.1929312,1793604512.565869,1372.9379177093506,4,4,0,0,False,,False,
+baseline_bulk_renaming_fe7673,Bulk Renaming,benign,baseline,1793604510.412962,1793604510.9103098,497.3478317260742,6,4,2,0,True,274.72496032714844,True,efd2ae8c-cfd0-434d-bf38-bf6759475595
+baseline_bulk_copying_f06fc6,Bulk Copying,benign,baseline,1793604509.461515,1793604510.128515,667.0000553131104,6,6,0,0,False,,False,
+baseline_normal_file_editing_adb7f3,Normal File Editing,benign,baseline,1793604508.403872,1793604509.179609,775.7370471954346,5,5,0,0,False,,False,

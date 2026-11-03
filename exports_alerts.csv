@@ -1,0 +1,941 @@
+alert_id,timestamp,iso_timestamp,detector_config,severity,risk_score,confidence,triggering_event_id,triggering_event_summary,supporting_event_ids,explanation,response_status,scenario_id
+8b886a04-2d7c-4264-b383-27e4908b8b4e,1793604668.46562,2026-11-02T07:31:08.465620+00:00,hybrid,CRITICAL,100,0.98,483daa36-d00e-491f-8c53-0ca09a0ddc5b,[CANARY TOUCH] MODIFY on '!00_corporate_passwords.xlsx',"[""838dd3e9-2fa2-4962-8e76-6dfd8d7f7f0e"", ""f93d3296-c0dd-4393-9047-839c3f590f5d"", ""f25da55a-a54a-4c54-8af9-ac7124cf0b4a"", ""53bd0838-f6cd-4a62-bc16-86649e474796"", ""ac99b922-73a0-4312-982e-19be82a15eb9"", ""fa712401-1b0a-4943-b6ae-96491dbb76bf"", ""f094447e-4580-4a5c-a938-682e9101aa00"", ""73db9c94-a170-47d5-b048-15cd152f6e8f"", ""8b73a02c-d92d-4643-8ae6-28fb36d12bed"", ""8ec0ac6f-3743-4c03-b90b-2ecbec935d18"", ""c4172fad-5115-47b9-9718-59f237cdfda7"", ""4a598b13-5757-4e5c-82e6-932060d54571"", ""ad851365-e4fb-4948-b233-9e75a19c2021"", ""8208cf9c-589b-4c89-a976-da2a18b3c8b2"", ""6527b688-f840-47e5-9679-bcbd6b7ef73c"", ""069e2e04-ed8d-4f1a-9fe8-e6ac96a3b35c""]","=== HYBRID DETECTOR ALERT (CRITICAL) ===
+Risk Score: 100/100 | Severity: CRITICAL
+Triggering Action: MODIFY on '!00_corporate_passwords.xlsx' (Entropy: 7.81, Size: 1024B, Canary: True)
+
+Identified Risk Factors:
+  • Canary file breached: '!00_corporate_passwords.xlsx' (MODIFY) confirmed by contextual filesystem damage
+  • Elevated operation velocity: 170.0 ops/sec across 11 companion files
+  • Multi-file modification sequence: 16 operations across 11 files
+
+Correlated Contextual Evidence (16 events):
+  - [MODIFY] documents/user_doc_09.txt (entropy=4.42, delta_t=0.00s)
+  - [CREATE] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [CREATE] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  ... and 11 additional prior events in window.
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,hybrid_canary_plus_rapid_bulk_846c70
+ffd37866-47d3-4703-8197-6ce2840bc2e3,1793604662.727081,2026-11-02T07:31:02.727081+00:00,canary_only,HIGH,85,0.85,a161059f-e62d-43ed-9126-46630495d140,[CANARY TOUCH] MODIFY on '!00_corporate_passwords.xlsx',"[""6a5b7bf0-8f85-4289-b781-dd2fe16230b4"", ""a9346c5e-b40a-478e-be5d-e643395ecfa8"", ""20da7808-0272-4b94-98c5-ee75c03d4c79"", ""511e52e0-82e7-4e5b-9d82-9686076bf931"", ""78d6c213-5b46-4173-a040-8fc0a2cbf0e1"", ""16469b10-68d9-4994-8f50-d420400de995"", ""f6139f45-59bc-47bd-b204-87d4c5a7a822"", ""716386f4-faa2-42bc-9d32-89884953017b"", ""358701fe-469e-4e38-8e5f-343d3a2c9097"", ""a7412802-4c9f-4c4d-9372-b742d16220be"", ""6efb906b-7eab-49e1-8eb5-c04809b6f4ef"", ""91e2579a-dd64-45b5-b4ac-030f2d06f44d"", ""a87c2a5e-72df-4984-8d3b-ccf27d787965"", ""1a5c71da-1b35-4648-bdf2-c5e55e874e5d"", ""e0516b84-15c0-4274-8645-97e64c3fb5b6"", ""1c2c3004-3d6d-4024-acd2-9c00dabe5282""]","=== CANARY_ONLY DETECTOR ALERT (HIGH) ===
+Risk Score: 85/100 | Severity: HIGH
+Triggering Action: MODIFY on '!00_corporate_passwords.xlsx' (Entropy: 7.80, Size: 1024B, Canary: True)
+
+Identified Risk Factors:
+  • Tripwire breach: Decoy canary file '!00_corporate_passwords.xlsx' received unauthorized MODIFY action
+  • Protected asset tampered with (size: 1024B, entropy: 7.80)
+
+Correlated Contextual Evidence (16 events):
+  - [MODIFY] documents/user_doc_09.txt (entropy=4.42, delta_t=0.00s)
+  - [CREATE] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [CREATE] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  ... and 11 additional prior events in window.
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,canary_only_canary_plus_rapid_bulk_6d56bf
+aac563ec-d6ff-422d-861a-800e46c4f3d7,1793604661.959509,2026-11-02T07:31:01.959509+00:00,canary_only,HIGH,85,0.85,f1f09a87-8d57-41ef-8940-e992f62fdfc6,[CANARY TOUCH] MODIFY on '!00_corporate_passwords.xlsx',[],"=== CANARY_ONLY DETECTOR ALERT (HIGH) ===
+Risk Score: 85/100 | Severity: HIGH
+Triggering Action: MODIFY on '!00_corporate_passwords.xlsx' (Entropy: 5.19, Size: 592B, Canary: True)
+
+Identified Risk Factors:
+  • Tripwire breach: Decoy canary file '!00_corporate_passwords.xlsx' received unauthorized MODIFY action
+  • Protected asset tampered with (size: 592B, entropy: 5.19)
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,canary_only_canary_touch_benign_fe029d
+2af76a62-8b6f-4727-a92a-83bc8b76acd7,1793604658.5371451,2026-11-02T07:30:58.537145+00:00,baseline,HIGH,80,0.7,e933ea3c-9ea1-4991-8561-0d4b8dc5d001,MODIFY on 'documents/user_doc_02.txt',"[""a076c7ed-edd2-4cd2-8544-0379dcdfbdd2"", ""cd580113-15f2-4585-bbdd-cab58960bdcd"", ""a264874d-d2c4-4813-a935-933db14170f8"", ""23096014-4364-4f75-ba88-cfc61e8d3f09"", ""927f7afd-9c29-4fe6-97e5-22e7d6410b96""]","=== BASELINE DETECTOR ALERT (HIGH) ===
+Risk Score: 80/100 | Severity: HIGH
+Triggering Action: MODIFY on 'documents/user_doc_02.txt' (Entropy: 7.90, Size: 2048B, Canary: False)
+
+Identified Risk Factors:
+  • Abnormal file burst rate: 6 operations across 6 files in 2.0s (3.0 ops/sec)
+  • High-entropy modification detected on 6 file(s) (entropy >= 7.0)
+
+Correlated Contextual Evidence (5 events):
+  - [MODIFY] documents/user_doc_06.txt (entropy=7.91, delta_t=0.13s)
+  - [MODIFY] documents/user_doc_05.txt (entropy=7.91, delta_t=0.10s)
+  - [MODIFY] documents/user_doc_04.txt (entropy=7.91, delta_t=0.07s)
+  - [MODIFY] documents/user_doc_01.txt (entropy=7.90, delta_t=0.05s)
+  - [MODIFY] documents/user_doc_03.txt (entropy=7.91, delta_t=0.02s)
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,baseline_rapid_bulk_without_canary_7d9bb6
+f46a4b98-19cd-4602-9209-4935c7028df7,1793604657.945416,2026-11-02T07:30:57.945416+00:00,baseline,HIGH,80,0.7,a1cfc22d-60eb-4b11-bb8d-11f94e0080b4,[CANARY TOUCH] MODIFY on '!00_corporate_passwords.xlsx',"[""06db267f-a252-498f-90a6-b548d19a3ccf"", ""787d4849-2ed3-4497-8b25-bf640fe4890b"", ""776c94f9-2424-4da1-8fd4-66d0644497e8"", ""50ab62fe-20fa-485e-aca9-5cd6ab4feaee"", ""61ed62fe-abc7-43db-a550-2bbb0feaf758"", ""984da4f9-5e3f-4788-a5e0-85c69afad7c4"", ""64d0dccd-aae2-4c17-b0bb-e6e1241963fe"", ""b6144e6d-d3ec-4b7d-a7b6-78573a04cabc"", ""1d06d5c0-04c1-4e4e-99c2-5682ab2418ef"", ""b01fe302-fc22-4324-8db3-76202103bfe5"", ""1bd420fd-8605-42a2-b624-93b9c5ee6fbd"", ""64514488-d187-4161-b054-b608f215872a"", ""f6216900-bc36-4c36-aa0a-368dd5ab540c"", ""83469df9-4dfb-4912-a547-b7782af7b921"", ""adb46020-f4d0-409a-bf36-0a9398568391"", ""ab75726c-ea8d-4d15-9ccc-158fb579e477""]","=== BASELINE DETECTOR ALERT (HIGH) ===
+Risk Score: 80/100 | Severity: HIGH
+Triggering Action: MODIFY on '!00_corporate_passwords.xlsx' (Entropy: 7.82, Size: 1024B, Canary: True)
+
+Identified Risk Factors:
+  • Abnormal file burst rate: 17 operations across 12 files in 2.0s (8.5 ops/sec)
+  • High-entropy modification detected on 1 file(s) (entropy >= 7.0)
+
+Correlated Contextual Evidence (16 events):
+  - [MODIFY] documents/user_doc_09.txt (entropy=4.42, delta_t=0.00s)
+  - [CREATE] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [CREATE] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  ... and 11 additional prior events in window.
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,baseline_canary_plus_rapid_bulk_3ab3f6
+2c6a00a5-0d2d-4196-8e5f-16c9acc9b45e,1793604655.770339,2026-11-02T07:30:55.770339+00:00,baseline,HIGH,75,0.65,b3c8d920-72a7-495d-b451-879db8ed0260,MOVE on 'finance/archived_user_doc_01.txt',"[""fec86587-b62f-4a51-8745-29827d2844da"", ""6241a8e9-c4e9-4263-b6e3-3f34ad361a60"", ""954ea118-d185-4a37-8168-d00f83ffcfaf"", ""67a6cd60-ef9c-47b9-ad3a-6a60d1cc8e20"", ""dec734b6-7159-473a-8c3b-aa0cef3e8316"", ""4b7ffe84-a550-4b0a-97c1-849111a3b1fc"", ""37e4c731-f061-49d3-8ac9-d4981c075be6""]","=== BASELINE DETECTOR ALERT (HIGH) ===
+Risk Score: 75/100 | Severity: HIGH
+Triggering Action: MOVE on 'finance/archived_user_doc_01.txt' (Entropy: 0.00, Size: 0B, Canary: False)
+
+Identified Risk Factors:
+  • Abnormal file burst rate: 8 operations across 8 files in 2.0s (4.0 ops/sec)
+  • Mass file renaming sequence: 4 rename operations within 2.0s
+
+Correlated Contextual Evidence (7 events):
+  - [MODIFY] finance/user_doc_05.txt (entropy=0.00, delta_t=0.17s)
+  - [MOVE] finance/archived_user_doc_05.txt (entropy=0.00, delta_t=0.17s)
+  - [MODIFY] finance/user_doc_04.txt (entropy=0.00, delta_t=0.08s)
+  - [MOVE] finance/archived_user_doc_04.txt (entropy=0.00, delta_t=0.08s)
+  - [MODIFY] finance/user_doc_01.txt (entropy=0.00, delta_t=0.00s)
+  ... and 2 additional prior events in window.
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,baseline_bulk_renaming_79d3f9
+3282d8d1-3938-44f5-b426-4245bf943dd4,1793604652.345087,2026-11-02T07:30:52.345087+00:00,hybrid,CRITICAL,100,0.98,086df979-f31f-4a0a-a7e1-0a5247cbb99d,[CANARY TOUCH] MODIFY on '!00_corporate_passwords.xlsx',"[""62c43bef-e79f-45f3-bbfe-e72ccdaaf1a4"", ""5f897d36-5c52-45b7-885d-a2afeac3031c"", ""ab621f63-bd36-4f4d-b3c7-dae39348cb22"", ""a4ba47bf-2774-4fa9-ba48-a1a0998be1d7"", ""56aa9437-a8cc-4b81-8129-8d5ad0a47b60"", ""c0b07f0d-8b97-4747-aa9f-081164eff045"", ""8afd4b18-60ec-40a7-9753-c2dcbf87540c"", ""fabc65a9-d376-4c8e-a0cb-62b98189e4a4"", ""38cf9e2d-e57c-4ba4-8eb6-7099b4d0b385"", ""529421bc-c463-4b9d-8c55-516396f34b86"", ""996150fd-7f21-4bb6-93a9-88ea6a64c90e"", ""9382dd8b-1488-4232-b128-0fc5311a163d"", ""0e4c6133-d5e7-4eda-8755-29c7beeacfc8"", ""3ed2872f-3d38-4442-99e3-c46fddce35a9"", ""5ff80162-39c9-4478-9fcc-38fde20480c9"", ""f078a48b-d9db-437d-b800-154d51c95b79""]","=== HYBRID DETECTOR ALERT (CRITICAL) ===
+Risk Score: 100/100 | Severity: CRITICAL
+Triggering Action: MODIFY on '!00_corporate_passwords.xlsx' (Entropy: 7.83, Size: 1024B, Canary: True)
+
+Identified Risk Factors:
+  • Canary file breached: '!00_corporate_passwords.xlsx' (MODIFY) confirmed by contextual filesystem damage
+  • Elevated operation velocity: 170.0 ops/sec across 11 companion files
+  • Multi-file modification sequence: 16 operations across 11 files
+
+Correlated Contextual Evidence (16 events):
+  - [MODIFY] documents/user_doc_09.txt (entropy=4.42, delta_t=0.00s)
+  - [CREATE] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [CREATE] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  ... and 11 additional prior events in window.
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,hybrid_canary_plus_rapid_bulk_10bf4a
+e9915a77-0e05-4aa3-84c2-d80f144f174b,1793604646.60395,2026-11-02T07:30:46.603950+00:00,canary_only,HIGH,85,0.85,39d44a38-0210-40a9-aa29-e06a285ef903,[CANARY TOUCH] MODIFY on '!00_corporate_passwords.xlsx',"[""7dccd115-c32e-4c89-8646-93d09af7a6fd"", ""800f5835-a115-45b0-bb47-e3ef8cc53ed1"", ""f319e33b-34fb-4677-a7ac-460bc0c47250"", ""645c6aff-9b8c-448c-aa53-c2af6d643244"", ""39a2bf9d-fa37-4004-aa01-4428f0384c4a"", ""1b2de9e4-d206-486a-bd61-0bff80a8f3d3"", ""2fd5f846-9fea-451a-a51d-ab44692bb2d0"", ""c33ac5c3-7ad1-4378-ae26-d65463abc43f"", ""960d87c7-4cf4-4efa-ab24-a9ac39159319"", ""692622dc-65f7-401c-90d3-02fa73443cab"", ""ba1dcf75-3898-4af5-ac4c-62e02f58a11d"", ""269fa572-7d79-41b8-bd36-a8853239bf91"", ""1993f648-1242-4abc-8769-01450c2a8469"", ""d50386c1-4370-4554-aedd-8520a9e552d8"", ""9e1fde44-455d-4455-95dc-8d51b06c07c9"", ""3ac64a37-16d8-40ad-92d9-a288718981a9""]","=== CANARY_ONLY DETECTOR ALERT (HIGH) ===
+Risk Score: 85/100 | Severity: HIGH
+Triggering Action: MODIFY on '!00_corporate_passwords.xlsx' (Entropy: 7.79, Size: 1024B, Canary: True)
+
+Identified Risk Factors:
+  • Tripwire breach: Decoy canary file '!00_corporate_passwords.xlsx' received unauthorized MODIFY action
+  • Protected asset tampered with (size: 1024B, entropy: 7.79)
+
+Correlated Contextual Evidence (16 events):
+  - [MODIFY] documents/user_doc_09.txt (entropy=4.42, delta_t=0.00s)
+  - [CREATE] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [CREATE] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  ... and 11 additional prior events in window.
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,canary_only_canary_plus_rapid_bulk_744251
+a7dc2845-01eb-4e1d-9717-0cedcbaad087,1793604645.866535,2026-11-02T07:30:45.866535+00:00,canary_only,HIGH,85,0.85,2de5ae2a-5e88-4ee3-8944-63cc1611449d,[CANARY TOUCH] MODIFY on '!00_corporate_passwords.xlsx',[],"=== CANARY_ONLY DETECTOR ALERT (HIGH) ===
+Risk Score: 85/100 | Severity: HIGH
+Triggering Action: MODIFY on '!00_corporate_passwords.xlsx' (Entropy: 5.19, Size: 592B, Canary: True)
+
+Identified Risk Factors:
+  • Tripwire breach: Decoy canary file '!00_corporate_passwords.xlsx' received unauthorized MODIFY action
+  • Protected asset tampered with (size: 592B, entropy: 5.19)
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,canary_only_canary_touch_benign_7d8bcd
+2205c1e8-286f-4cb0-8b13-7e77b07aacff,1793604642.434154,2026-11-02T07:30:42.434154+00:00,baseline,HIGH,80,0.7,5069a8c4-cb1b-4f24-93d5-4d1da809576a,MODIFY on 'documents/user_doc_02.txt',"[""5f1c8a19-15a6-42ca-a5c0-c5f1d6acd72c"", ""4e74ba99-eb9d-4f39-a90d-8d9bb32152a8"", ""9df3679c-c31e-4a13-b697-63f4ed7cdf9c"", ""09373a30-c28e-4477-8aff-4701f9994a5d"", ""08a5aa4b-6e76-45b9-a01f-c31071559083""]","=== BASELINE DETECTOR ALERT (HIGH) ===
+Risk Score: 80/100 | Severity: HIGH
+Triggering Action: MODIFY on 'documents/user_doc_02.txt' (Entropy: 7.91, Size: 2048B, Canary: False)
+
+Identified Risk Factors:
+  • Abnormal file burst rate: 6 operations across 6 files in 2.0s (3.0 ops/sec)
+  • High-entropy modification detected on 6 file(s) (entropy >= 7.0)
+
+Correlated Contextual Evidence (5 events):
+  - [MODIFY] documents/user_doc_06.txt (entropy=7.89, delta_t=0.13s)
+  - [MODIFY] documents/user_doc_05.txt (entropy=7.91, delta_t=0.10s)
+  - [MODIFY] documents/user_doc_04.txt (entropy=7.92, delta_t=0.07s)
+  - [MODIFY] documents/user_doc_01.txt (entropy=7.90, delta_t=0.05s)
+  - [MODIFY] documents/user_doc_03.txt (entropy=7.90, delta_t=0.02s)
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,baseline_rapid_bulk_without_canary_3716b8
+b0a8dae2-bb84-4cab-8be9-ff06891a84ea,1793604641.8423522,2026-11-02T07:30:41.842352+00:00,baseline,HIGH,80,0.7,34a05ec3-b624-49a8-9e57-868ba436e4cb,[CANARY TOUCH] MODIFY on '!00_corporate_passwords.xlsx',"[""51170f63-5676-4aaa-ade5-537e05971d84"", ""8a76d914-ffc1-41dd-8849-eb8608d23030"", ""7855d3f4-e969-4233-a0eb-0e96396c3267"", ""cbd59c01-af71-425e-b7b4-11630716055c"", ""fc9fb114-eeb2-4207-b1bb-53bc861b9669"", ""f94bf1dd-13d8-4ce5-bb3c-a802bc6b3b08"", ""a2173519-d54d-45f8-b50c-e24ca0375580"", ""a305da4d-4274-4467-9ec3-fc642b1a23f5"", ""19619163-871e-4b21-a1b1-f6afdbbfcada"", ""f71b518a-7483-4b79-985b-98bdf7b35fc1"", ""b2067016-6d77-4c6c-9669-3b3725a5ed89"", ""52185be3-6e10-4cbf-ad73-dcce95897137"", ""d58e9248-db57-453d-94f4-4e3067a80114"", ""5465767d-2d94-4ab5-b4a4-2da1245a12e4"", ""2481c936-03ed-4b86-b53b-a4cf5469c3ff"", ""75d86e7a-ed93-499d-8314-de58bb31eb3b""]","=== BASELINE DETECTOR ALERT (HIGH) ===
+Risk Score: 80/100 | Severity: HIGH
+Triggering Action: MODIFY on '!00_corporate_passwords.xlsx' (Entropy: 7.84, Size: 1024B, Canary: True)
+
+Identified Risk Factors:
+  • Abnormal file burst rate: 17 operations across 12 files in 2.0s (8.5 ops/sec)
+  • High-entropy modification detected on 1 file(s) (entropy >= 7.0)
+
+Correlated Contextual Evidence (16 events):
+  - [MODIFY] documents/user_doc_09.txt (entropy=4.42, delta_t=0.00s)
+  - [CREATE] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [CREATE] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  ... and 11 additional prior events in window.
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,baseline_canary_plus_rapid_bulk_cde394
+deb12b24-4f4d-45d8-9ee8-e717aa5517c7,1793604639.6458812,2026-11-02T07:30:39.645881+00:00,baseline,HIGH,75,0.65,9749acdd-7bb0-479a-995c-9bf1bfe8795b,MOVE on 'finance/archived_user_doc_01.txt',"[""398a49f3-6d9e-4b12-940e-65cbd4bff38e"", ""15d44c1a-6ac6-45da-b432-54696324c122"", ""0bd85ab7-b887-4fcc-abe7-14f330958744"", ""7ab85ee5-ddb5-46b3-8eb7-529effec4bd0"", ""67f78901-94bd-45b1-bd71-5d4929be1359"", ""0dd533f2-bbd5-43c6-8513-21f50d1be14c"", ""36aaf8d3-c383-4c14-80a5-339f4c96a5ff""]","=== BASELINE DETECTOR ALERT (HIGH) ===
+Risk Score: 75/100 | Severity: HIGH
+Triggering Action: MOVE on 'finance/archived_user_doc_01.txt' (Entropy: 0.00, Size: 0B, Canary: False)
+
+Identified Risk Factors:
+  • Abnormal file burst rate: 8 operations across 8 files in 2.0s (4.0 ops/sec)
+  • Mass file renaming sequence: 4 rename operations within 2.0s
+
+Correlated Contextual Evidence (7 events):
+  - [MODIFY] finance/user_doc_05.txt (entropy=0.00, delta_t=0.17s)
+  - [MOVE] finance/archived_user_doc_05.txt (entropy=0.00, delta_t=0.17s)
+  - [MODIFY] finance/user_doc_04.txt (entropy=0.00, delta_t=0.09s)
+  - [MOVE] finance/archived_user_doc_04.txt (entropy=0.00, delta_t=0.08s)
+  - [MODIFY] finance/user_doc_01.txt (entropy=0.00, delta_t=0.00s)
+  ... and 2 additional prior events in window.
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,baseline_bulk_renaming_2bff6c
+d1144a54-1dca-4838-87e5-cbf53575cb5c,1793604636.221175,2026-11-02T07:30:36.221175+00:00,hybrid,CRITICAL,100,0.98,5bce65f2-7bcc-41c1-b97c-6b34001fec85,[CANARY TOUCH] MODIFY on '!00_corporate_passwords.xlsx',"[""90b7bde2-1a52-47b8-aa93-dcca7278d2ef"", ""ba03fcaa-5a2d-4e17-b5ea-eb4545d334a5"", ""3fbe8f05-ba9a-4088-bea1-2772e9e4b9e5"", ""af4e3ab2-67ad-4e86-ae90-dfa2f7c27987"", ""a0cc95c6-b95f-4822-8e07-d82c4e26cfb2"", ""74615f42-b5de-451a-b83a-32e58a4c4c44"", ""8640b114-4364-404c-9a9a-c330febb8c01"", ""70250beb-3aa0-44b0-bfbb-4bc74f86e0e3"", ""b71f224e-912c-47e2-bf43-81c13fce9117"", ""79273900-94d3-4b1a-96f0-03714d83d691"", ""882afb69-ec4e-4b5a-83ac-743edd846aff"", ""0a087191-ee1c-4e26-9d83-44bd5a1acf50"", ""2f57ee17-053e-4ef1-b6da-2f510a6f0688"", ""ee8b4de0-d407-4720-9745-2732abd7d2f1"", ""d1ccc1ee-3bbd-46ff-8775-08fe8a40acaa"", ""deb4e106-997c-4dfe-9701-b7d9aca490d6""]","=== HYBRID DETECTOR ALERT (CRITICAL) ===
+Risk Score: 100/100 | Severity: CRITICAL
+Triggering Action: MODIFY on '!00_corporate_passwords.xlsx' (Entropy: 7.81, Size: 1024B, Canary: True)
+
+Identified Risk Factors:
+  • Canary file breached: '!00_corporate_passwords.xlsx' (MODIFY) confirmed by contextual filesystem damage
+  • Elevated operation velocity: 170.0 ops/sec across 11 companion files
+  • Multi-file modification sequence: 16 operations across 11 files
+
+Correlated Contextual Evidence (16 events):
+  - [MODIFY] documents/user_doc_09.txt (entropy=4.42, delta_t=0.00s)
+  - [CREATE] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [CREATE] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  ... and 11 additional prior events in window.
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,hybrid_canary_plus_rapid_bulk_43b2a0
+f83486e3-6b17-4d2d-99f4-8b6ed37be0c7,1793604630.4130208,2026-11-02T07:30:30.413021+00:00,canary_only,HIGH,85,0.85,2d4678f0-a6e4-47bb-b5ed-e5ccd85a90a3,[CANARY TOUCH] MODIFY on '!00_corporate_passwords.xlsx',"[""3fc12c81-b42a-4705-b4b9-83049273dbb6"", ""8d602605-a7e3-4c17-a18b-2cc64394b9c9"", ""79508dcb-b2e3-450d-97ac-8fa3aaa27b6b"", ""75a69a48-78e9-4ec0-86c8-d6719c85976c"", ""e22a1b3d-ab4c-4cb0-9672-3d2fd00b5fc0"", ""99b2ee4d-64fd-48fd-9653-d242746e2573"", ""3587f6d3-c296-4e8f-a39b-7b61f9cc5822"", ""7931011e-4f5d-40f0-b5d7-313d5818989b"", ""b55234b7-5b9a-4f5d-9d27-4eb9231e64cf"", ""54296ce4-0c55-45ed-ae46-e613a1983de8"", ""f47afcfb-d08d-4f9d-9fbd-f07ebc05d782"", ""3c679c96-ee25-48da-af9a-4e9cd255cd77"", ""90456b93-2bd6-4224-8537-758ba02d0560"", ""827fec0c-278f-4b24-8ea9-f5b0c1c1ae07"", ""044fef3e-bbf3-4f37-b525-524adefaa480"", ""0d5280bb-bcf6-4be3-8fe0-6c528f736189""]","=== CANARY_ONLY DETECTOR ALERT (HIGH) ===
+Risk Score: 85/100 | Severity: HIGH
+Triggering Action: MODIFY on '!00_corporate_passwords.xlsx' (Entropy: 7.82, Size: 1024B, Canary: True)
+
+Identified Risk Factors:
+  • Tripwire breach: Decoy canary file '!00_corporate_passwords.xlsx' received unauthorized MODIFY action
+  • Protected asset tampered with (size: 1024B, entropy: 7.82)
+
+Correlated Contextual Evidence (16 events):
+  - [MODIFY] documents/user_doc_09.txt (entropy=4.42, delta_t=0.00s)
+  - [CREATE] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [CREATE] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  ... and 11 additional prior events in window.
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,canary_only_canary_plus_rapid_bulk_82557b
+2a727765-bfa3-465d-b09d-afb923e2cc04,1793604629.64714,2026-11-02T07:30:29.647140+00:00,canary_only,HIGH,85,0.85,63617e0a-32a8-48bf-8840-02c9a9d503bc,[CANARY TOUCH] MODIFY on '!00_corporate_passwords.xlsx',[],"=== CANARY_ONLY DETECTOR ALERT (HIGH) ===
+Risk Score: 85/100 | Severity: HIGH
+Triggering Action: MODIFY on '!00_corporate_passwords.xlsx' (Entropy: 5.17, Size: 592B, Canary: True)
+
+Identified Risk Factors:
+  • Tripwire breach: Decoy canary file '!00_corporate_passwords.xlsx' received unauthorized MODIFY action
+  • Protected asset tampered with (size: 592B, entropy: 5.17)
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,canary_only_canary_touch_benign_9cfcee
+e4289d1a-9711-4fce-93ca-44e7ad87d0d9,1793604626.243744,2026-11-02T07:30:26.243744+00:00,baseline,HIGH,80,0.7,dc4112b4-9d15-45a5-b2ca-758baef10bd6,MODIFY on 'documents/user_doc_02.txt',"[""6ffd3eb8-5691-4d49-bde0-0d806e04d6e9"", ""e95861f5-8c4c-479d-9624-1c4b1df13f87"", ""9244aa67-1fbc-431c-a212-42e59146a94f"", ""0aabd6cf-c468-42cf-bf72-1be873b57d9c"", ""82afdfba-0309-4632-b3c7-04bd3ec8f981""]","=== BASELINE DETECTOR ALERT (HIGH) ===
+Risk Score: 80/100 | Severity: HIGH
+Triggering Action: MODIFY on 'documents/user_doc_02.txt' (Entropy: 7.90, Size: 2048B, Canary: False)
+
+Identified Risk Factors:
+  • Abnormal file burst rate: 6 operations across 6 files in 2.0s (3.0 ops/sec)
+  • High-entropy modification detected on 6 file(s) (entropy >= 7.0)
+
+Correlated Contextual Evidence (5 events):
+  - [MODIFY] documents/user_doc_06.txt (entropy=7.90, delta_t=0.14s)
+  - [MODIFY] documents/user_doc_05.txt (entropy=7.93, delta_t=0.12s)
+  - [MODIFY] documents/user_doc_04.txt (entropy=7.90, delta_t=0.10s)
+  - [MODIFY] documents/user_doc_01.txt (entropy=7.90, delta_t=0.08s)
+  - [MODIFY] documents/user_doc_03.txt (entropy=7.91, delta_t=0.03s)
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,baseline_rapid_bulk_without_canary_dc42bb
+fb2830c3-4d7d-49ac-85de-abf451269123,1793604625.640037,2026-11-02T07:30:25.640037+00:00,baseline,HIGH,80,0.7,f3db8c37-3168-4efc-b191-940c77a66aa6,[CANARY TOUCH] MODIFY on '!00_corporate_passwords.xlsx',"[""b18e7d15-97f1-4a68-ab4a-dc46f2be5fdb"", ""53d6ba74-c085-48b9-ab9f-01bca2160a71"", ""738c9ddb-93ab-4ff6-9828-0c9fff0bcdac"", ""23dfc1d6-ef48-4da2-bc6d-7f1d03810842"", ""9c5c4a8a-b46c-4130-aab4-76c885c13c0a"", ""aa77e318-ce65-443a-8bfe-e669339cc8c6"", ""412b9bc6-41c8-49a3-89e6-5783f9730d1d"", ""d48d01b2-759a-47ee-a8e0-deb1f134c094"", ""a15d467d-6776-45ee-9a75-bab814373785"", ""8468e123-9e49-45aa-bcfa-694228ca003c"", ""1252e934-1bb8-448c-aa7d-6ebeff251265"", ""2a38bd3f-65a1-4cb9-8760-c094c7c63c0e"", ""efb539e9-c750-4c66-b70f-ee65ec77ee03"", ""142ef6fa-707f-4d5f-ac6d-35050b5751d0"", ""bfd00474-9048-4bf5-81d6-d17939c26d6e"", ""88a44f9d-5807-40dc-82a1-d418eb266166""]","=== BASELINE DETECTOR ALERT (HIGH) ===
+Risk Score: 80/100 | Severity: HIGH
+Triggering Action: MODIFY on '!00_corporate_passwords.xlsx' (Entropy: 7.80, Size: 1024B, Canary: True)
+
+Identified Risk Factors:
+  • Abnormal file burst rate: 17 operations across 12 files in 2.0s (8.5 ops/sec)
+  • High-entropy modification detected on 1 file(s) (entropy >= 7.0)
+
+Correlated Contextual Evidence (16 events):
+  - [MODIFY] documents/user_doc_09.txt (entropy=4.42, delta_t=0.00s)
+  - [CREATE] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [CREATE] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  ... and 11 additional prior events in window.
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,baseline_canary_plus_rapid_bulk_cececf
+147f264d-35de-465e-84f9-9836f164f93a,1793604623.4776042,2026-11-02T07:30:23.477604+00:00,baseline,HIGH,75,0.65,f441f312-4840-4c73-b486-2e363ebc2525,MOVE on 'finance/archived_user_doc_01.txt',"[""2a010543-c10b-4bdd-afdb-57d5d5c935b7"", ""b2be55a3-6bae-40e4-9436-573d64e0a785"", ""7135c4a7-ff16-4905-a452-9b777119f28c"", ""52b17d19-1901-48f3-ab33-c389cbb5573d"", ""6b1ac880-533b-4225-bcf0-9e800edfab2b"", ""ff36738d-779d-4403-a141-fa89c7924f0c"", ""042f7351-6479-4fa2-90d5-45f11f706ec1""]","=== BASELINE DETECTOR ALERT (HIGH) ===
+Risk Score: 75/100 | Severity: HIGH
+Triggering Action: MOVE on 'finance/archived_user_doc_01.txt' (Entropy: 0.00, Size: 0B, Canary: False)
+
+Identified Risk Factors:
+  • Abnormal file burst rate: 8 operations across 8 files in 2.0s (4.0 ops/sec)
+  • Mass file renaming sequence: 4 rename operations within 2.0s
+
+Correlated Contextual Evidence (7 events):
+  - [MODIFY] finance/user_doc_05.txt (entropy=0.00, delta_t=0.17s)
+  - [MOVE] finance/archived_user_doc_05.txt (entropy=0.00, delta_t=0.17s)
+  - [MODIFY] finance/user_doc_04.txt (entropy=0.00, delta_t=0.09s)
+  - [MOVE] finance/archived_user_doc_04.txt (entropy=0.00, delta_t=0.09s)
+  - [MODIFY] finance/user_doc_01.txt (entropy=0.00, delta_t=0.00s)
+  ... and 2 additional prior events in window.
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,baseline_bulk_renaming_425bd9
+5a4c5f72-bc3c-41f5-a3c7-f522d7a874f6,1793604620.126801,2026-11-02T07:30:20.126801+00:00,hybrid,CRITICAL,100,0.98,ee2a70ff-da89-4c75-a67a-ea567b0ee68f,[CANARY TOUCH] MODIFY on '!00_corporate_passwords.xlsx',"[""869a0ea9-6896-44d6-8adf-4348a3183ab8"", ""bf3561fd-354d-4e55-88c3-e81aa56fb695"", ""c6e2dcb5-b95e-46cd-81c9-e4202a50f4a0"", ""bb4b408d-dfe8-4027-a82f-a1686d862c6c"", ""5161734e-a304-49df-b0f6-9e2b4d3b2028"", ""3bb29164-3778-4092-8a08-537b0d37cb60"", ""d45272d0-831c-4c3e-86e3-f71d0a4d4de8"", ""29f33ca2-9666-4d13-8b42-a29f0db27695"", ""b70c0008-b6e6-4191-a7b5-68caf6e0eade"", ""6b089f54-b29a-428c-9c1a-af5fa56719e1"", ""906a8588-7e75-4c38-bbd6-13dca96ac19e"", ""5a94c7b0-bf52-4abf-b3a6-c2336a039cad"", ""378d8bdb-360d-4fb0-acf2-29aacaaa8817"", ""69a153fb-7ca3-441d-b35a-d16aabbdffd7"", ""aa97265e-44f8-455d-84a5-77f6c0377542"", ""8b1e6091-7a4b-4b36-a5d1-e3d5c86c2a2d""]","=== HYBRID DETECTOR ALERT (CRITICAL) ===
+Risk Score: 100/100 | Severity: CRITICAL
+Triggering Action: MODIFY on '!00_corporate_passwords.xlsx' (Entropy: 7.81, Size: 1024B, Canary: True)
+
+Identified Risk Factors:
+  • Canary file breached: '!00_corporate_passwords.xlsx' (MODIFY) confirmed by contextual filesystem damage
+  • Elevated operation velocity: 170.0 ops/sec across 11 companion files
+  • Multi-file modification sequence: 16 operations across 11 files
+
+Correlated Contextual Evidence (16 events):
+  - [MODIFY] documents/user_doc_09.txt (entropy=4.42, delta_t=0.00s)
+  - [CREATE] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [CREATE] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  ... and 11 additional prior events in window.
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,hybrid_canary_plus_rapid_bulk_054323
+17e09909-24d3-4af0-a383-ae043b45afe4,1793604614.4556,2026-11-02T07:30:14.455600+00:00,canary_only,HIGH,85,0.85,43ae5711-5839-427a-a1c5-fb505bfd0d2c,[CANARY TOUCH] MODIFY on '!00_corporate_passwords.xlsx',"[""4956223d-31e4-4008-804b-5cb78ef10c07"", ""69a121f9-c869-4cff-af06-a21685510506"", ""61767929-18cf-4f22-b334-711358f55df5"", ""5bcbec28-e602-4117-9dca-293ad91ff712"", ""21d90b86-ad90-4b38-b418-2e670641e2fd"", ""eb5dff3c-1065-4073-bc28-a0c52c33a15e"", ""eb8eee3e-13cd-4142-8c88-5db70d61faba"", ""02976b2d-1564-41b3-9128-75d489ea5aab"", ""22b7603c-2608-4498-91a4-ff857d237e6a"", ""3cb9ecc6-18dc-4468-988c-df6618dfdd9c"", ""7ee1a37e-cbf8-4f2d-a326-395701e1b64d"", ""8f11a3b7-fb14-4943-a2c3-da38e530d0ea"", ""ce4ee2e9-ed92-4851-a516-e32ce47f9a86"", ""5bbe9863-eff5-4dae-b058-4e752ef11ecf"", ""73c0d9df-f0a7-45fb-bb07-f73974916fcd"", ""d26d3930-dbc1-454a-b077-fc8e8bc441f0""]","=== CANARY_ONLY DETECTOR ALERT (HIGH) ===
+Risk Score: 85/100 | Severity: HIGH
+Triggering Action: MODIFY on '!00_corporate_passwords.xlsx' (Entropy: 7.80, Size: 1024B, Canary: True)
+
+Identified Risk Factors:
+  • Tripwire breach: Decoy canary file '!00_corporate_passwords.xlsx' received unauthorized MODIFY action
+  • Protected asset tampered with (size: 1024B, entropy: 7.80)
+
+Correlated Contextual Evidence (16 events):
+  - [MODIFY] documents/user_doc_09.txt (entropy=4.42, delta_t=0.00s)
+  - [CREATE] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [CREATE] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  ... and 11 additional prior events in window.
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,canary_only_canary_plus_rapid_bulk_c345d3
+395cd67c-7013-4eb2-a816-c8c8a2c788f1,1793604613.729939,2026-11-02T07:30:13.729939+00:00,canary_only,HIGH,85,0.85,b209c6f4-a4c0-4a1c-a52d-047e5be20fa8,[CANARY TOUCH] MODIFY on '!00_corporate_passwords.xlsx',[],"=== CANARY_ONLY DETECTOR ALERT (HIGH) ===
+Risk Score: 85/100 | Severity: HIGH
+Triggering Action: MODIFY on '!00_corporate_passwords.xlsx' (Entropy: 5.19, Size: 592B, Canary: True)
+
+Identified Risk Factors:
+  • Tripwire breach: Decoy canary file '!00_corporate_passwords.xlsx' received unauthorized MODIFY action
+  • Protected asset tampered with (size: 592B, entropy: 5.19)
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,canary_only_canary_touch_benign_d4c868
+806efc48-401e-42bb-bdb8-97561d6f2445,1793604610.2697332,2026-11-02T07:30:10.269733+00:00,baseline,HIGH,80,0.7,4771ad0a-cd24-4c39-bca8-c242194e8645,MODIFY on 'documents/user_doc_02.txt',"[""0a5ac21e-0bcd-4f7a-8f2d-fd02d4bdd788"", ""9235d747-f943-4da1-be1d-73d4ca49567c"", ""1c1c3d71-d159-457a-9cad-ba2220a65bee"", ""c553b90f-04b5-426b-94ea-cdba387ffc8e"", ""fb58a24c-0eb1-422c-bc39-3b7dc6776681""]","=== BASELINE DETECTOR ALERT (HIGH) ===
+Risk Score: 80/100 | Severity: HIGH
+Triggering Action: MODIFY on 'documents/user_doc_02.txt' (Entropy: 7.92, Size: 2048B, Canary: False)
+
+Identified Risk Factors:
+  • Abnormal file burst rate: 6 operations across 6 files in 2.0s (3.0 ops/sec)
+  • High-entropy modification detected on 6 file(s) (entropy >= 7.0)
+
+Correlated Contextual Evidence (5 events):
+  - [MODIFY] documents/user_doc_06.txt (entropy=7.90, delta_t=0.13s)
+  - [MODIFY] documents/user_doc_05.txt (entropy=7.93, delta_t=0.11s)
+  - [MODIFY] documents/user_doc_04.txt (entropy=7.91, delta_t=0.08s)
+  - [MODIFY] documents/user_doc_01.txt (entropy=7.91, delta_t=0.05s)
+  - [MODIFY] documents/user_doc_03.txt (entropy=7.90, delta_t=0.03s)
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,baseline_rapid_bulk_without_canary_215ea2
+4b5ab4a0-7b54-43f3-ac27-29d33576e0ff,1793604609.681623,2026-11-02T07:30:09.681623+00:00,baseline,HIGH,80,0.7,c314b3db-18ef-4812-ab26-5a03cd7468ff,[CANARY TOUCH] MODIFY on '!00_corporate_passwords.xlsx',"[""4eada281-cc17-4354-86c5-bcc439bbc3d2"", ""c989db53-e1af-45f0-b36f-38866c6b9a65"", ""4c30e47c-9012-4f65-a5d0-f2d7efc4c9f9"", ""7b9e3089-05b4-4f12-a922-f915e9770067"", ""9612f2a3-8640-4a26-bbef-147d1fc8bc36"", ""7e0f02f3-a6d0-4a95-ad85-aae9bbfc334a"", ""51a8f49e-0320-4d4c-a8b3-e1fa5861a6fe"", ""ba896ff4-bd48-4078-b995-f9d0b3287b21"", ""7ec17ee3-ce1c-47ef-abd5-6c5742072e26"", ""1af6781c-dcc9-4181-86a5-307699c7d067"", ""ea4afa82-a400-4cd7-bd4b-64e030081b43"", ""e5d20de9-94ac-431e-832b-b42486200347"", ""8bef0022-e354-4da9-bd79-cf0970e277b4"", ""bcdb23da-5425-49de-8761-42fab91127b1"", ""55553d26-f2eb-48eb-b7e3-3b67fa712f62"", ""a7a03673-4ebc-4545-ae9c-1e6bb3559d6d""]","=== BASELINE DETECTOR ALERT (HIGH) ===
+Risk Score: 80/100 | Severity: HIGH
+Triggering Action: MODIFY on '!00_corporate_passwords.xlsx' (Entropy: 7.83, Size: 1024B, Canary: True)
+
+Identified Risk Factors:
+  • Abnormal file burst rate: 17 operations across 12 files in 2.0s (8.5 ops/sec)
+  • High-entropy modification detected on 1 file(s) (entropy >= 7.0)
+
+Correlated Contextual Evidence (16 events):
+  - [MODIFY] documents/user_doc_09.txt (entropy=4.42, delta_t=0.00s)
+  - [CREATE] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [CREATE] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  ... and 11 additional prior events in window.
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,baseline_canary_plus_rapid_bulk_664ee6
+964b18d8-ee77-49ae-bed1-4ec70394e79f,1793604607.483617,2026-11-02T07:30:07.483617+00:00,baseline,HIGH,75,0.65,7a252b1b-7e34-40e3-8e9d-2b8d48a2a432,MOVE on 'finance/archived_user_doc_01.txt',"[""2b547311-b85e-4920-b668-b04d1d819bf0"", ""e7591a7b-e723-4b3d-a5db-62e7400ab80f"", ""bab14a3a-2464-4dfb-ae95-87f7382b8f9e"", ""481c5e2e-6ca1-450a-9e9b-b5d221feb627"", ""10f2e396-b146-4e0d-a6c9-008f58f9605d"", ""40ea1eb2-68f5-43cd-80ed-5fa04013f4d3"", ""583cc0f8-3191-4983-a48d-67c9d98a88cb""]","=== BASELINE DETECTOR ALERT (HIGH) ===
+Risk Score: 75/100 | Severity: HIGH
+Triggering Action: MOVE on 'finance/archived_user_doc_01.txt' (Entropy: 0.00, Size: 0B, Canary: False)
+
+Identified Risk Factors:
+  • Abnormal file burst rate: 8 operations across 8 files in 2.0s (4.0 ops/sec)
+  • Mass file renaming sequence: 4 rename operations within 2.0s
+
+Correlated Contextual Evidence (7 events):
+  - [MODIFY] finance/user_doc_05.txt (entropy=0.00, delta_t=0.18s)
+  - [MOVE] finance/archived_user_doc_05.txt (entropy=0.00, delta_t=0.17s)
+  - [MODIFY] finance/user_doc_04.txt (entropy=0.00, delta_t=0.09s)
+  - [MOVE] finance/archived_user_doc_04.txt (entropy=0.00, delta_t=0.08s)
+  - [MODIFY] finance/user_doc_01.txt (entropy=0.00, delta_t=0.00s)
+  ... and 2 additional prior events in window.
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,baseline_bulk_renaming_ac817d
+080bd659-6667-4095-bd8a-7a3ff747bfc8,1793604604.0758662,2026-11-02T07:30:04.075866+00:00,hybrid,CRITICAL,100,0.98,c20844af-1a75-4491-ae4e-419f517dc4c8,[CANARY TOUCH] MODIFY on '!00_corporate_passwords.xlsx',"[""c96aecc2-29b0-4840-bf80-d48751d71956"", ""5f4f805b-71b2-4903-aad1-365e0ed44b21"", ""4e4210f4-d88d-449b-b34a-90bbf620f299"", ""3ece185c-8711-401d-bb15-446ab8b973b8"", ""55016fa2-8238-4808-b696-45ec199aee4d"", ""4006f039-7bb5-4587-9287-1b6a1b6ecdfb"", ""fe390cc3-cc47-49cc-b794-e5da0cfe411b"", ""93e6f8f5-5f9f-4390-8b50-63b244054653"", ""4e5669d4-93be-478b-8141-50748d2b82bb"", ""a5d1b7fb-fa5f-4294-ab93-6bd643a9a9c2"", ""6e644659-68a7-4757-9659-7a1bbf7c50ce"", ""aa71cf64-7530-47e8-af41-7f8e58a9e2fb"", ""37cc7756-404c-4e45-ac60-c4ddbb6efc94"", ""b17cba85-5d68-4d53-85d6-583f69daf4f8"", ""67ef0261-97c0-41e0-b535-3c840f301014"", ""01fff189-ed3d-4165-9851-f64481bf6684""]","=== HYBRID DETECTOR ALERT (CRITICAL) ===
+Risk Score: 100/100 | Severity: CRITICAL
+Triggering Action: MODIFY on '!00_corporate_passwords.xlsx' (Entropy: 7.82, Size: 1024B, Canary: True)
+
+Identified Risk Factors:
+  • Canary file breached: '!00_corporate_passwords.xlsx' (MODIFY) confirmed by contextual filesystem damage
+  • Elevated operation velocity: 170.0 ops/sec across 11 companion files
+  • Multi-file modification sequence: 16 operations across 11 files
+
+Correlated Contextual Evidence (16 events):
+  - [MODIFY] documents/user_doc_09.txt (entropy=4.42, delta_t=0.00s)
+  - [CREATE] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [CREATE] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  ... and 11 additional prior events in window.
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,hybrid_canary_plus_rapid_bulk_faf2ea
+a9acdd1c-dc8d-4331-9c81-520c2e188a62,1793604598.3230999,2026-11-02T07:29:58.323100+00:00,canary_only,HIGH,85,0.85,95a0d53a-c915-47f2-956c-9a5a7b14e184,[CANARY TOUCH] MODIFY on '!00_corporate_passwords.xlsx',"[""89d07260-cd04-4550-9e6f-da7da3c19e55"", ""c04a029c-650f-42d6-8b00-655b34473db1"", ""679e8881-8338-42be-a1fb-f9c5c8aaeaa7"", ""56c6e4e4-68fb-49dc-9c01-642187e8e177"", ""79a8f18b-ea13-4675-a7d2-b3273c7d8d17"", ""1b26b9cc-a128-4cc0-b589-c2dbf8f20865"", ""fde22552-c518-4b5e-8861-3a48e4ce88d3"", ""a0baf730-b192-496c-9d2c-5941849202ed"", ""563bf553-afad-4801-8419-dd61da684969"", ""c665c83a-064c-4b45-a4de-fa4bf20eee25"", ""cc12e190-9cbe-4373-8572-44bc77fd9b7b"", ""6224235c-e4d9-4cf2-a070-b4db87c78345"", ""93f7e5ce-9f70-41c4-8578-6910c073fd24"", ""ce4cf352-9703-4624-8eff-e3248a03dd75"", ""44e0bbf8-290d-4c8f-8358-ae2a00e04876"", ""03afe501-2abd-41c4-b15d-6fc9b6efb533""]","=== CANARY_ONLY DETECTOR ALERT (HIGH) ===
+Risk Score: 85/100 | Severity: HIGH
+Triggering Action: MODIFY on '!00_corporate_passwords.xlsx' (Entropy: 7.80, Size: 1024B, Canary: True)
+
+Identified Risk Factors:
+  • Tripwire breach: Decoy canary file '!00_corporate_passwords.xlsx' received unauthorized MODIFY action
+  • Protected asset tampered with (size: 1024B, entropy: 7.80)
+
+Correlated Contextual Evidence (16 events):
+  - [MODIFY] documents/user_doc_09.txt (entropy=4.42, delta_t=0.00s)
+  - [CREATE] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [CREATE] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  ... and 11 additional prior events in window.
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,canary_only_canary_plus_rapid_bulk_d9057a
+16a32275-85c3-4ae1-af67-c2bd271198bf,1793604597.572246,2026-11-02T07:29:57.572246+00:00,canary_only,HIGH,85,0.85,3b80888b-690d-47db-bc36-b5c8268bfbae,[CANARY TOUCH] MODIFY on '!00_corporate_passwords.xlsx',[],"=== CANARY_ONLY DETECTOR ALERT (HIGH) ===
+Risk Score: 85/100 | Severity: HIGH
+Triggering Action: MODIFY on '!00_corporate_passwords.xlsx' (Entropy: 5.20, Size: 592B, Canary: True)
+
+Identified Risk Factors:
+  • Tripwire breach: Decoy canary file '!00_corporate_passwords.xlsx' received unauthorized MODIFY action
+  • Protected asset tampered with (size: 592B, entropy: 5.20)
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,canary_only_canary_touch_benign_6f47a9
+a5ab5f3f-a1e3-40cf-8bbe-218b57a2bdf3,1793604594.137038,2026-11-02T07:29:54.137038+00:00,baseline,HIGH,80,0.7,df0e7eb0-64fd-4f03-bd76-da8179835e3b,MODIFY on 'documents/user_doc_02.txt',"[""f4e4b657-4586-435c-a2bc-ad60caacfba7"", ""5104a505-e311-4ef1-920d-34b9b85eee02"", ""847756cd-4118-4efc-b86d-ba82988fdeeb"", ""beb0b7e5-5bb8-42e3-bd90-96321f817683"", ""b8954592-96a6-49d6-a7d6-2612e36116fd""]","=== BASELINE DETECTOR ALERT (HIGH) ===
+Risk Score: 80/100 | Severity: HIGH
+Triggering Action: MODIFY on 'documents/user_doc_02.txt' (Entropy: 7.91, Size: 2048B, Canary: False)
+
+Identified Risk Factors:
+  • Abnormal file burst rate: 6 operations across 6 files in 2.0s (3.0 ops/sec)
+  • High-entropy modification detected on 6 file(s) (entropy >= 7.0)
+
+Correlated Contextual Evidence (5 events):
+  - [MODIFY] documents/user_doc_06.txt (entropy=7.91, delta_t=0.12s)
+  - [MODIFY] documents/user_doc_05.txt (entropy=7.92, delta_t=0.10s)
+  - [MODIFY] documents/user_doc_04.txt (entropy=7.91, delta_t=0.07s)
+  - [MODIFY] documents/user_doc_01.txt (entropy=7.91, delta_t=0.05s)
+  - [MODIFY] documents/user_doc_03.txt (entropy=7.90, delta_t=0.02s)
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,baseline_rapid_bulk_without_canary_09856d
+423b9d7a-c080-4c7c-81f8-3f5b73508662,1793604593.5467331,2026-11-02T07:29:53.546733+00:00,baseline,HIGH,80,0.7,124c6f1c-a92e-4baf-9a50-809ae645a21f,[CANARY TOUCH] MODIFY on '!00_corporate_passwords.xlsx',"[""f05e1236-46f7-4827-885b-a8275c50ee2d"", ""eaa8682a-e59e-43a9-92df-db0703128f37"", ""bfcdabb5-f7b2-476c-823d-a9acfea6e715"", ""aba7642d-9b36-4857-87a3-b8213146b474"", ""9d463b40-d73a-44d4-93e0-2a869e34d8bd"", ""47dc82cc-42c5-4436-9040-3cc0617247b5"", ""fa3d09e4-c618-496b-a145-10d274a249a5"", ""9894faa8-e6a6-4d24-b558-eb295b213e13"", ""bc0731b6-febd-4cf0-95b4-5555616e1e25"", ""f1022933-9992-4d4e-be43-c78583432743"", ""f5cd5d05-7887-4a28-96c2-d4e7801807f6"", ""d0eceaeb-07d1-4086-a31e-b8b2af468777"", ""ce3d2198-945b-4a7f-9dc7-e08f6e73e74d"", ""5dfa5f1f-7896-44f8-af4c-4a095a92b195"", ""79de77a4-b494-41c2-87f0-6befa810b333"", ""4b5c8970-6089-4d90-97bc-b21ef77e3e4c""]","=== BASELINE DETECTOR ALERT (HIGH) ===
+Risk Score: 80/100 | Severity: HIGH
+Triggering Action: MODIFY on '!00_corporate_passwords.xlsx' (Entropy: 7.81, Size: 1024B, Canary: True)
+
+Identified Risk Factors:
+  • Abnormal file burst rate: 17 operations across 12 files in 2.0s (8.5 ops/sec)
+  • High-entropy modification detected on 1 file(s) (entropy >= 7.0)
+
+Correlated Contextual Evidence (16 events):
+  - [MODIFY] documents/user_doc_09.txt (entropy=4.42, delta_t=0.00s)
+  - [CREATE] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [CREATE] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  ... and 11 additional prior events in window.
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,baseline_canary_plus_rapid_bulk_9fddd0
+aac87712-cdca-4373-a31e-81c11864ed90,1793604591.370392,2026-11-02T07:29:51.370392+00:00,baseline,HIGH,75,0.65,3042280a-74a3-4f38-8558-f0c25a40cd68,MOVE on 'finance/archived_user_doc_01.txt',"[""d14a45c7-9edc-4f5f-ac0d-67764fcd9ecf"", ""f1222f2f-fde2-4d2f-9aa2-5e5371198acd"", ""8f12c857-0a7f-4821-86cd-dc2d864340be"", ""2d4dbcf8-9b30-4bbc-9bfd-ba641fdc668e"", ""ecd54289-eb75-4c98-8428-a19b024b246e"", ""bcd7b753-a40f-4629-9460-af5fdfb4abfc"", ""42c723dd-aafa-4263-ae8f-33d2e6b7563d""]","=== BASELINE DETECTOR ALERT (HIGH) ===
+Risk Score: 75/100 | Severity: HIGH
+Triggering Action: MOVE on 'finance/archived_user_doc_01.txt' (Entropy: 0.00, Size: 0B, Canary: False)
+
+Identified Risk Factors:
+  • Abnormal file burst rate: 8 operations across 8 files in 2.0s (4.0 ops/sec)
+  • Mass file renaming sequence: 4 rename operations within 2.0s
+
+Correlated Contextual Evidence (7 events):
+  - [MODIFY] finance/user_doc_05.txt (entropy=0.00, delta_t=0.17s)
+  - [MOVE] finance/archived_user_doc_05.txt (entropy=0.00, delta_t=0.17s)
+  - [MODIFY] finance/user_doc_04.txt (entropy=0.00, delta_t=0.09s)
+  - [MOVE] finance/archived_user_doc_04.txt (entropy=0.00, delta_t=0.09s)
+  - [MODIFY] finance/user_doc_01.txt (entropy=0.00, delta_t=0.00s)
+  ... and 2 additional prior events in window.
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,baseline_bulk_renaming_ab5efe
+13774b81-2193-4dc7-be09-722e18db370e,1793604587.952642,2026-11-02T07:29:47.952642+00:00,hybrid,CRITICAL,100,0.98,6d8ea27d-41fe-499a-8859-0323a071de0c,[CANARY TOUCH] MODIFY on '!00_corporate_passwords.xlsx',"[""a8d48359-64c6-468f-afb7-ac268e1d715a"", ""a1697022-cc3a-4871-b0a5-cccda184dbc7"", ""9d7c83de-e107-4b9c-a911-b01fc13e979a"", ""997f48ae-1d1b-4339-b74d-79e04f4ceb83"", ""12c1398b-9985-45c3-959f-d02aa3b148f2"", ""eede37b2-b96c-4f82-b046-e8ca014cdba4"", ""3109af8f-f74b-4eba-9d1b-8c55cf232c5d"", ""ef276626-bc2a-4b17-8f4d-28fc830d0f80"", ""98eed497-7dbe-4503-9245-09ab9e684444"", ""5c937abd-a139-4f24-a7ac-9fe694e45769"", ""a8b0cdc1-30a2-4715-8aa8-f79c9e408085"", ""53f4730b-f776-4e2a-92cf-5bfdd973c7eb"", ""0e69a1a7-edec-42f8-962f-1c29d5756dad"", ""64188f83-a17c-47ae-8805-cd0ea3a70aa5"", ""e1c2bd77-d5ed-43a7-9b89-de494fe880b2"", ""f81f366f-d222-41f8-a5fd-9dff2b0c4af4""]","=== HYBRID DETECTOR ALERT (CRITICAL) ===
+Risk Score: 100/100 | Severity: CRITICAL
+Triggering Action: MODIFY on '!00_corporate_passwords.xlsx' (Entropy: 7.82, Size: 1024B, Canary: True)
+
+Identified Risk Factors:
+  • Canary file breached: '!00_corporate_passwords.xlsx' (MODIFY) confirmed by contextual filesystem damage
+  • Elevated operation velocity: 170.0 ops/sec across 11 companion files
+  • Multi-file modification sequence: 16 operations across 11 files
+
+Correlated Contextual Evidence (16 events):
+  - [MODIFY] documents/user_doc_09.txt (entropy=4.42, delta_t=0.00s)
+  - [CREATE] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [CREATE] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  ... and 11 additional prior events in window.
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,hybrid_canary_plus_rapid_bulk_6c124f
+4096d007-7497-462b-9e4f-be67aefbefd5,1793604582.158689,2026-11-02T07:29:42.158689+00:00,canary_only,HIGH,85,0.85,ff97d519-1db4-4b7b-b7dd-da3851bcb32b,[CANARY TOUCH] MODIFY on '!00_corporate_passwords.xlsx',"[""7a6ea773-5689-4f70-b815-716a12ee71f6"", ""344015cc-3235-4cd7-b694-fdbfc32e9ebf"", ""c3f87503-b39b-431e-9c33-ec8417dcd78a"", ""c252f957-6518-4d4b-bc63-2bed85a71653"", ""edccdeab-4a69-49e2-b3e2-39433c8535f3"", ""ce880e94-0b0e-4ab6-9605-3295fb7b7957"", ""372bcf51-26d4-432b-add3-36b96a90383b"", ""c167df2e-6f26-46a3-9193-483ccb76d6b0"", ""9b812c61-d9ea-4641-8db0-78bb96ac9c46"", ""81c280cf-9016-48eb-b506-15527e6f99a9"", ""ea96c295-18c4-44e4-9a0e-5e593c3ccd3f"", ""5efc1839-035e-4e16-b615-8f5b22694428"", ""c6c29163-1fe7-4134-ae34-c3a915368948"", ""8c3182db-23fa-4885-91d9-ba2dfed61a7b"", ""c5ebb55e-54fd-41aa-bb2d-0cf67ceb6861"", ""c8f574e4-bc89-4127-a58e-2d9de260221c""]","=== CANARY_ONLY DETECTOR ALERT (HIGH) ===
+Risk Score: 85/100 | Severity: HIGH
+Triggering Action: MODIFY on '!00_corporate_passwords.xlsx' (Entropy: 7.83, Size: 1024B, Canary: True)
+
+Identified Risk Factors:
+  • Tripwire breach: Decoy canary file '!00_corporate_passwords.xlsx' received unauthorized MODIFY action
+  • Protected asset tampered with (size: 1024B, entropy: 7.83)
+
+Correlated Contextual Evidence (16 events):
+  - [MODIFY] documents/user_doc_09.txt (entropy=4.42, delta_t=0.00s)
+  - [CREATE] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [CREATE] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  ... and 11 additional prior events in window.
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,canary_only_canary_plus_rapid_bulk_ba8bd0
+d98b884b-ac3e-48ef-998b-bd0ff3efb042,1793604581.4114912,2026-11-02T07:29:41.411491+00:00,canary_only,HIGH,85,0.85,79b1ba1b-7e84-45cf-a7df-51c80d906835,[CANARY TOUCH] MODIFY on '!00_corporate_passwords.xlsx',[],"=== CANARY_ONLY DETECTOR ALERT (HIGH) ===
+Risk Score: 85/100 | Severity: HIGH
+Triggering Action: MODIFY on '!00_corporate_passwords.xlsx' (Entropy: 5.20, Size: 592B, Canary: True)
+
+Identified Risk Factors:
+  • Tripwire breach: Decoy canary file '!00_corporate_passwords.xlsx' received unauthorized MODIFY action
+  • Protected asset tampered with (size: 592B, entropy: 5.20)
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,canary_only_canary_touch_benign_1e878d
+35bf8bac-0e76-4e9f-8918-c6ce448a8eac,1793604577.975451,2026-11-02T07:29:37.975451+00:00,baseline,HIGH,80,0.7,c8291be9-90f1-4be3-bafa-66d0f50e54fc,MODIFY on 'documents/user_doc_02.txt',"[""cc93ce85-4a4b-4705-8761-e7ec20dc6d6a"", ""e2485099-3416-4f32-acaa-df7645810f5e"", ""b1407d22-19a5-4ada-b9f0-0ccf99de3361"", ""e70dee28-de33-4796-b92c-4d1f2783472b"", ""48243f0c-c42d-4c68-b060-448810a10c5f""]","=== BASELINE DETECTOR ALERT (HIGH) ===
+Risk Score: 80/100 | Severity: HIGH
+Triggering Action: MODIFY on 'documents/user_doc_02.txt' (Entropy: 7.90, Size: 2048B, Canary: False)
+
+Identified Risk Factors:
+  • Abnormal file burst rate: 6 operations across 6 files in 2.0s (3.0 ops/sec)
+  • High-entropy modification detected on 6 file(s) (entropy >= 7.0)
+
+Correlated Contextual Evidence (5 events):
+  - [MODIFY] documents/user_doc_06.txt (entropy=7.90, delta_t=0.13s)
+  - [MODIFY] documents/user_doc_05.txt (entropy=7.92, delta_t=0.10s)
+  - [MODIFY] documents/user_doc_04.txt (entropy=7.90, delta_t=0.07s)
+  - [MODIFY] documents/user_doc_01.txt (entropy=7.90, delta_t=0.05s)
+  - [MODIFY] documents/user_doc_03.txt (entropy=7.91, delta_t=0.02s)
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,baseline_rapid_bulk_without_canary_e2745f
+8fce7a70-d614-4282-98e7-37fa6721a3d3,1793604577.388923,2026-11-02T07:29:37.388923+00:00,baseline,HIGH,80,0.7,4fe7bd3e-43fe-444d-b273-ddd476cdf1ed,[CANARY TOUCH] MODIFY on '!00_corporate_passwords.xlsx',"[""0c9305fd-789b-4621-9784-90662b2952f0"", ""54a2625c-1d28-486c-b86a-665a9700f5dd"", ""fc46e808-934c-4349-a157-42b995359aa3"", ""c4227a50-7754-4378-9c68-87dfd437a46b"", ""00c871ff-2219-49e5-bb5f-cb0ec359ae77"", ""4e13b89e-acfe-4434-be2a-c7cb13095c06"", ""954d6009-870f-433d-b280-d9ae1fd1d445"", ""28aa9c31-ad57-4204-af74-8323d3c54744"", ""7fec082b-6c11-4e62-a937-32b039fe6943"", ""fa90db25-de08-4005-a297-74d4122af37a"", ""4d294034-bef6-4ffe-87fd-46572e1906eb"", ""8a675297-3d9f-4f3f-9d3d-a71f69ae5759"", ""5117bc2d-50d6-4df0-9936-a6dfced5e8b3"", ""a2d3f08b-cf3a-499a-b2a7-e8940eb89df5"", ""09ad86fd-a49d-4cf7-a49b-47d9f415d68b"", ""cb32b221-da4e-4367-938f-61693479a647""]","=== BASELINE DETECTOR ALERT (HIGH) ===
+Risk Score: 80/100 | Severity: HIGH
+Triggering Action: MODIFY on '!00_corporate_passwords.xlsx' (Entropy: 7.79, Size: 1024B, Canary: True)
+
+Identified Risk Factors:
+  • Abnormal file burst rate: 17 operations across 12 files in 2.0s (8.5 ops/sec)
+  • High-entropy modification detected on 1 file(s) (entropy >= 7.0)
+
+Correlated Contextual Evidence (16 events):
+  - [MODIFY] documents/user_doc_09.txt (entropy=4.42, delta_t=0.00s)
+  - [CREATE] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [CREATE] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  ... and 11 additional prior events in window.
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,baseline_canary_plus_rapid_bulk_756ec5
+13ddd58d-eee4-4242-831b-24be76e44f41,1793604575.204652,2026-11-02T07:29:35.204652+00:00,baseline,HIGH,75,0.65,cf5b8e4e-4d5a-4f3c-9852-d268920ce032,MOVE on 'finance/archived_user_doc_01.txt',"[""cf1301f2-20de-49c1-b4e5-41d077d2d308"", ""35259e09-ed63-4339-a732-d4661e98411e"", ""8ed989be-475d-4690-a479-ff0d1ca6ca4e"", ""ea236d4a-5d84-4028-9516-65e8715861ba"", ""2f169f67-4a3f-4247-b07b-38e2bbdfd84d"", ""d02610b7-3cd0-48a5-9c1a-74c812e546fd"", ""194ed4c7-3a5d-45c9-87d4-c70640e4ffa1""]","=== BASELINE DETECTOR ALERT (HIGH) ===
+Risk Score: 75/100 | Severity: HIGH
+Triggering Action: MOVE on 'finance/archived_user_doc_01.txt' (Entropy: 0.00, Size: 0B, Canary: False)
+
+Identified Risk Factors:
+  • Abnormal file burst rate: 8 operations across 8 files in 2.0s (4.0 ops/sec)
+  • Mass file renaming sequence: 4 rename operations within 2.0s
+
+Correlated Contextual Evidence (7 events):
+  - [MODIFY] finance/user_doc_05.txt (entropy=0.00, delta_t=0.17s)
+  - [MOVE] finance/archived_user_doc_05.txt (entropy=0.00, delta_t=0.16s)
+  - [MODIFY] finance/user_doc_04.txt (entropy=0.00, delta_t=0.09s)
+  - [MOVE] finance/archived_user_doc_04.txt (entropy=0.00, delta_t=0.09s)
+  - [MODIFY] finance/user_doc_01.txt (entropy=0.00, delta_t=0.00s)
+  ... and 2 additional prior events in window.
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,baseline_bulk_renaming_9d7ffe
+7c11e48e-cac3-4e67-9065-1bdb3e7c6bc5,1793604571.771847,2026-11-02T07:29:31.771847+00:00,hybrid,CRITICAL,100,0.98,0963723d-accb-4de3-8e4d-eb268ad55fc0,[CANARY TOUCH] MODIFY on '!00_corporate_passwords.xlsx',"[""5150d4ed-460c-4e5a-b6cc-8998edab68ac"", ""09da84e6-75a0-4b71-ac70-91db1547b3c5"", ""0dba7619-4b5c-4be2-a209-0e31d52d08a0"", ""83331be2-54ea-496d-ae24-b66884b287fc"", ""488d649a-450e-4300-855f-a6440455f870"", ""939f7da4-4a63-4fff-b99c-5bc310ebcc78"", ""c291e921-dadb-4676-b75f-e1f78d91a55a"", ""735bb7f7-be7d-4189-aa11-c3c2229aee62"", ""077522d5-6104-4c02-ad1a-b7e7eb3823af"", ""7b6e91a2-59b8-416a-ba32-91db2ac68947"", ""f4065bd1-d185-434c-af62-dadb05a0de98"", ""c77864fb-73ea-4b71-8728-c6ea2c73956f"", ""722bb15e-efc2-4b13-a1c7-b8446ce09440"", ""d4f2d3ff-8cb8-4bf6-ac96-eb70517be286"", ""c45b63a2-eb82-4bf3-86db-03abc2438cae"", ""0f9c54f7-f9ba-4b4c-97d6-6c13b31de176""]","=== HYBRID DETECTOR ALERT (CRITICAL) ===
+Risk Score: 100/100 | Severity: CRITICAL
+Triggering Action: MODIFY on '!00_corporate_passwords.xlsx' (Entropy: 7.81, Size: 1024B, Canary: True)
+
+Identified Risk Factors:
+  • Canary file breached: '!00_corporate_passwords.xlsx' (MODIFY) confirmed by contextual filesystem damage
+  • Elevated operation velocity: 170.0 ops/sec across 11 companion files
+  • Multi-file modification sequence: 16 operations across 11 files
+
+Correlated Contextual Evidence (16 events):
+  - [MODIFY] documents/user_doc_09.txt (entropy=4.42, delta_t=0.00s)
+  - [CREATE] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [CREATE] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  ... and 11 additional prior events in window.
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,hybrid_canary_plus_rapid_bulk_0df6f6
+6ea0d21c-5cee-4930-bc50-3118488c68cf,1793604565.9837718,2026-11-02T07:29:25.983772+00:00,canary_only,HIGH,85,0.85,0336eb10-bd66-4d91-b1cb-24b083c37429,[CANARY TOUCH] MODIFY on '!00_corporate_passwords.xlsx',"[""67b931d6-1eca-4f90-abe9-056cac7acd9a"", ""6402b4cc-982d-45d1-8cfb-ca35114c3847"", ""c53664e1-c89a-4fe0-a8d7-9f52bcab8281"", ""5fa55061-97ab-49bb-bbe3-42996aef4045"", ""a3f419d7-9bbc-43ad-92c4-ebbc880f132f"", ""424e3e18-548e-45ff-9f5c-32e3e75e5cc5"", ""13cc28e6-de2c-4c36-ba17-7a5afcefb173"", ""2df99771-7b0a-46c3-aaa6-bfdba7c85fd2"", ""e09067a8-4082-4350-9bb1-7d9466e62aec"", ""c31cfcb4-77b4-49b6-9060-d98343c5b78f"", ""afc60483-aef6-4586-b166-089bb9509ad0"", ""01120b99-4982-40d5-90ae-abf5fee6a516"", ""d90f6bfd-d8d0-4440-b1f7-efdae80e31bc"", ""ff15b8a6-08f0-420e-a7f7-bc5bf1c5f1d6"", ""bd567805-27c7-4282-9667-b122235658d6"", ""a39b448a-1686-46bf-87fd-79eae1dfa53e""]","=== CANARY_ONLY DETECTOR ALERT (HIGH) ===
+Risk Score: 85/100 | Severity: HIGH
+Triggering Action: MODIFY on '!00_corporate_passwords.xlsx' (Entropy: 7.81, Size: 1024B, Canary: True)
+
+Identified Risk Factors:
+  • Tripwire breach: Decoy canary file '!00_corporate_passwords.xlsx' received unauthorized MODIFY action
+  • Protected asset tampered with (size: 1024B, entropy: 7.81)
+
+Correlated Contextual Evidence (16 events):
+  - [MODIFY] documents/user_doc_09.txt (entropy=4.42, delta_t=0.00s)
+  - [CREATE] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [CREATE] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  ... and 11 additional prior events in window.
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,canary_only_canary_plus_rapid_bulk_856948
+9655b6ea-cca7-420c-86f5-13eca6eb9471,1793604565.2303932,2026-11-02T07:29:25.230393+00:00,canary_only,HIGH,85,0.85,c3cd2862-c276-4386-aeb5-787bf5869223,[CANARY TOUCH] MODIFY on '!00_corporate_passwords.xlsx',[],"=== CANARY_ONLY DETECTOR ALERT (HIGH) ===
+Risk Score: 85/100 | Severity: HIGH
+Triggering Action: MODIFY on '!00_corporate_passwords.xlsx' (Entropy: 5.18, Size: 591B, Canary: True)
+
+Identified Risk Factors:
+  • Tripwire breach: Decoy canary file '!00_corporate_passwords.xlsx' received unauthorized MODIFY action
+  • Protected asset tampered with (size: 591B, entropy: 5.18)
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,canary_only_canary_touch_benign_fe65b1
+680a5d59-b59c-4a74-80c9-b1a88a2caec1,1793604561.8344939,2026-11-02T07:29:21.834494+00:00,baseline,HIGH,80,0.7,84569f62-0fff-4b7f-96af-3c0170d64297,MODIFY on 'documents/user_doc_02.txt',"[""f6013d06-4dd3-43af-bb1e-0966f7a7e45b"", ""6d041e87-77a2-413e-8c78-1bc712e7f499"", ""83da6906-47dc-4969-b4f1-5cccdad490be"", ""ded9552f-2a0d-4dfc-aa73-082982f39ecd"", ""18befd2d-6596-4791-a5e5-d8323a37d08e""]","=== BASELINE DETECTOR ALERT (HIGH) ===
+Risk Score: 80/100 | Severity: HIGH
+Triggering Action: MODIFY on 'documents/user_doc_02.txt' (Entropy: 7.91, Size: 2048B, Canary: False)
+
+Identified Risk Factors:
+  • Abnormal file burst rate: 6 operations across 6 files in 2.0s (3.0 ops/sec)
+  • High-entropy modification detected on 6 file(s) (entropy >= 7.0)
+
+Correlated Contextual Evidence (5 events):
+  - [MODIFY] documents/user_doc_06.txt (entropy=7.91, delta_t=0.12s)
+  - [MODIFY] documents/user_doc_05.txt (entropy=7.91, delta_t=0.10s)
+  - [MODIFY] documents/user_doc_04.txt (entropy=7.89, delta_t=0.08s)
+  - [MODIFY] documents/user_doc_01.txt (entropy=7.91, delta_t=0.05s)
+  - [MODIFY] documents/user_doc_03.txt (entropy=7.91, delta_t=0.03s)
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,baseline_rapid_bulk_without_canary_7b884d
+54f50f6a-ac4f-4838-ae87-746247b01d83,1793604561.250609,2026-11-02T07:29:21.250609+00:00,baseline,HIGH,80,0.7,a2fe9d28-2628-4eb7-b89e-a6710f3a2bb1,[CANARY TOUCH] MODIFY on '!00_corporate_passwords.xlsx',"[""a544a9dc-f80a-49a9-8864-7c27ca973e52"", ""1c9f0ace-e20e-4d03-b5b9-eaf6e2ca98ba"", ""57aa9a1f-6f7f-4137-9711-b5db4b362a31"", ""de726849-766b-493c-be2d-eddd8743dcc9"", ""c55e081a-acb4-4367-8773-a19c25a6e763"", ""84c5d9ab-acef-45cb-bea8-a7aafc686b53"", ""062a10de-44d9-4eef-9b4a-960f995a732b"", ""7d9c50ac-613f-46ea-9035-f6ac221f5e06"", ""f10b4593-6787-4ec8-b40e-aa5d3bd23cd1"", ""7160f65d-9870-4159-bd61-dc59816e970f"", ""37d66d58-d1e5-42a3-8631-abf211806a4d"", ""3c62754f-40ef-43a9-a4be-f86da44051ee"", ""7ad294b1-969d-43e4-a668-50ddef34ca4f"", ""2ad66afc-5780-4b82-b71f-cde7860de2b2"", ""8cf2463f-2349-46a4-b8aa-281384aeb456"", ""05a86ae2-486a-4052-a843-39ad42db584f""]","=== BASELINE DETECTOR ALERT (HIGH) ===
+Risk Score: 80/100 | Severity: HIGH
+Triggering Action: MODIFY on '!00_corporate_passwords.xlsx' (Entropy: 7.84, Size: 1024B, Canary: True)
+
+Identified Risk Factors:
+  • Abnormal file burst rate: 17 operations across 12 files in 2.0s (8.5 ops/sec)
+  • High-entropy modification detected on 1 file(s) (entropy >= 7.0)
+
+Correlated Contextual Evidence (16 events):
+  - [MODIFY] documents/user_doc_09.txt (entropy=4.42, delta_t=0.01s)
+  - [CREATE] documents/user_doc_10.txt (entropy=4.46, delta_t=0.01s)
+  - [MODIFY] documents/user_doc_10.txt (entropy=4.46, delta_t=0.01s)
+  - [CREATE] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  ... and 11 additional prior events in window.
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,baseline_canary_plus_rapid_bulk_9df2c9
+1358bc4a-6092-4490-98f2-cb8916219fe3,1793604559.052219,2026-11-02T07:29:19.052219+00:00,baseline,HIGH,75,0.65,4eb07932-2427-45ad-8a31-71377e714043,MOVE on 'finance/archived_user_doc_01.txt',"[""9d449458-0a11-4acf-be7d-2f8c9ad0db76"", ""35b8737a-7974-4bed-b325-2973e55f96d3"", ""a0407162-8124-42af-b6e3-ef589e81a85c"", ""6fd6b52d-bd23-4a52-b053-2440d3489295"", ""3a232134-4ef4-4e8c-8d32-6da9c96be3f4"", ""cbe421aa-e2d3-490c-990d-d873563d59df"", ""cad1e64a-ed09-48ec-bf3f-bd87d38f406d""]","=== BASELINE DETECTOR ALERT (HIGH) ===
+Risk Score: 75/100 | Severity: HIGH
+Triggering Action: MOVE on 'finance/archived_user_doc_01.txt' (Entropy: 0.00, Size: 0B, Canary: False)
+
+Identified Risk Factors:
+  • Abnormal file burst rate: 8 operations across 8 files in 2.0s (4.0 ops/sec)
+  • Mass file renaming sequence: 4 rename operations within 2.0s
+
+Correlated Contextual Evidence (7 events):
+  - [MODIFY] finance/user_doc_05.txt (entropy=0.00, delta_t=0.17s)
+  - [MOVE] finance/archived_user_doc_05.txt (entropy=0.00, delta_t=0.17s)
+  - [MODIFY] finance/user_doc_04.txt (entropy=0.00, delta_t=0.09s)
+  - [MOVE] finance/archived_user_doc_04.txt (entropy=0.00, delta_t=0.08s)
+  - [MODIFY] finance/user_doc_01.txt (entropy=0.00, delta_t=0.00s)
+  ... and 2 additional prior events in window.
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,baseline_bulk_renaming_6769c0
+1d6b6075-e1ed-44d5-81cf-b989de8e9a1f,1793604555.6367612,2026-11-02T07:29:15.636761+00:00,hybrid,CRITICAL,100,0.98,e219a893-5c49-4272-8ea3-858409e9485d,[CANARY TOUCH] MODIFY on '!00_corporate_passwords.xlsx',"[""b46bd210-21b5-4b32-957b-162a470634b5"", ""ab84a61b-ff14-468b-be59-76a5117925e4"", ""93d5d48c-970f-49f1-8f17-1c6c3ea90d67"", ""c5b666df-34ff-4a77-8b04-d6e1dae9cc0a"", ""0966f6e4-4dcc-4e4f-b0c3-334e7572d365"", ""9c51768f-2b11-41e5-9fe3-6f729ad231ef"", ""7e6015e3-19e9-4f05-9deb-8d7e911a9061"", ""03f38974-b527-4547-82cb-5ea17a6accdf"", ""e394e5cf-ffb8-4343-9145-81c24a0054a8"", ""e781d990-81ff-45f9-a8ea-160e54060323"", ""799812c9-17b6-4085-80dd-aabb00e1f7d4"", ""6194468c-a33c-4b19-acee-5a028b378335"", ""6cdeb095-b113-4898-aae7-0a7ce1fea5a8"", ""7cdfde5f-b2a4-4c76-b8b1-d5b881dd1236"", ""9a930242-510f-49dc-91d3-9a30b4dba864"", ""3b687416-85b4-4383-81a3-5bfbdc57b89a""]","=== HYBRID DETECTOR ALERT (CRITICAL) ===
+Risk Score: 100/100 | Severity: CRITICAL
+Triggering Action: MODIFY on '!00_corporate_passwords.xlsx' (Entropy: 7.80, Size: 1024B, Canary: True)
+
+Identified Risk Factors:
+  • Canary file breached: '!00_corporate_passwords.xlsx' (MODIFY) confirmed by contextual filesystem damage
+  • Elevated operation velocity: 170.0 ops/sec across 11 companion files
+  • Multi-file modification sequence: 16 operations across 11 files
+
+Correlated Contextual Evidence (16 events):
+  - [MODIFY] documents/user_doc_09.txt (entropy=4.42, delta_t=0.00s)
+  - [CREATE] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [CREATE] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  ... and 11 additional prior events in window.
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,hybrid_canary_plus_rapid_bulk_bd3aa1
+2c74d940-f906-4b07-aaeb-dacfb91ec11e,1793604549.836286,2026-11-02T07:29:09.836286+00:00,canary_only,HIGH,85,0.85,efa9841c-9dc3-42d8-a004-e0d35e2a81d8,[CANARY TOUCH] MODIFY on '!00_corporate_passwords.xlsx',"[""6d9e9e90-144d-4e9e-8feb-7ed56b3a905d"", ""f00fec0b-6996-42ad-8a2b-1ed8849bc50a"", ""7d2d5fe4-321a-4231-b847-c7c1cfee1d9b"", ""36dacdfa-a4da-4a50-947e-9f4935361ddc"", ""e0b1f00b-55bc-47ae-9ca1-2c2c1279b6a7"", ""6b63fb42-5422-43ff-8b84-172c5dfa65b1"", ""ef48e1d1-1d57-454c-b5eb-76b01319de9d"", ""fd956534-7492-4ce6-9e43-e1a292fcface"", ""5f59a559-4b02-4464-bbbd-4dc0505bfd04"", ""d80588e7-e03e-4dec-a8dc-ff7bec889c0f"", ""ff182a3f-f915-44fd-9b55-2e9425b8f403"", ""de7d881a-8c94-4b18-ad00-060aed9cc045"", ""5d365429-8a2e-4ab6-91bd-9e866fac747a"", ""27bddd6a-cf3f-4058-addf-bc76880b7db1"", ""1fb51d2a-30cb-4929-9bf3-5702a1e3ab44"", ""05b9ff70-e066-423e-8841-7451be63cebd""]","=== CANARY_ONLY DETECTOR ALERT (HIGH) ===
+Risk Score: 85/100 | Severity: HIGH
+Triggering Action: MODIFY on '!00_corporate_passwords.xlsx' (Entropy: 7.80, Size: 1024B, Canary: True)
+
+Identified Risk Factors:
+  • Tripwire breach: Decoy canary file '!00_corporate_passwords.xlsx' received unauthorized MODIFY action
+  • Protected asset tampered with (size: 1024B, entropy: 7.80)
+
+Correlated Contextual Evidence (16 events):
+  - [MODIFY] documents/user_doc_09.txt (entropy=4.42, delta_t=0.00s)
+  - [CREATE] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [CREATE] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  ... and 11 additional prior events in window.
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,canary_only_canary_plus_rapid_bulk_eaba57
+fc2b77fc-53ce-48c6-b453-2c28c92c994a,1793604549.082926,2026-11-02T07:29:09.082926+00:00,canary_only,HIGH,85,0.85,aee8c1a0-62f9-4431-a62c-9d9950256d3d,[CANARY TOUCH] MODIFY on '!00_corporate_passwords.xlsx',[],"=== CANARY_ONLY DETECTOR ALERT (HIGH) ===
+Risk Score: 85/100 | Severity: HIGH
+Triggering Action: MODIFY on '!00_corporate_passwords.xlsx' (Entropy: 5.19, Size: 592B, Canary: True)
+
+Identified Risk Factors:
+  • Tripwire breach: Decoy canary file '!00_corporate_passwords.xlsx' received unauthorized MODIFY action
+  • Protected asset tampered with (size: 592B, entropy: 5.19)
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,canary_only_canary_touch_benign_69b997
+b7001f8e-e03b-407d-a1af-22f0a94bfd22,1793604545.660106,2026-11-02T07:29:05.660106+00:00,baseline,HIGH,80,0.7,1588a4d0-e5c5-4e09-ab77-187599b9529c,MODIFY on 'documents/user_doc_02.txt',"[""2c2c5712-9651-4a19-a079-b8969e5b624a"", ""cfcb580f-e68e-4663-9ba6-7fb83c989d4f"", ""63fda226-bdb4-437d-8033-c414cf76a132"", ""0066dda0-904a-4999-a136-dbcfea524ac3"", ""87513cee-119f-4ec6-8a6a-6068624e0df9""]","=== BASELINE DETECTOR ALERT (HIGH) ===
+Risk Score: 80/100 | Severity: HIGH
+Triggering Action: MODIFY on 'documents/user_doc_02.txt' (Entropy: 7.89, Size: 2048B, Canary: False)
+
+Identified Risk Factors:
+  • Abnormal file burst rate: 6 operations across 6 files in 2.0s (3.0 ops/sec)
+  • High-entropy modification detected on 6 file(s) (entropy >= 7.0)
+
+Correlated Contextual Evidence (5 events):
+  - [MODIFY] documents/user_doc_06.txt (entropy=7.90, delta_t=0.12s)
+  - [MODIFY] documents/user_doc_05.txt (entropy=7.92, delta_t=0.10s)
+  - [MODIFY] documents/user_doc_04.txt (entropy=7.91, delta_t=0.08s)
+  - [MODIFY] documents/user_doc_01.txt (entropy=7.91, delta_t=0.05s)
+  - [MODIFY] documents/user_doc_03.txt (entropy=7.90, delta_t=0.02s)
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,baseline_rapid_bulk_without_canary_bc08b1
+83839244-dfa2-4af8-a063-b547d79a34b3,1793604545.0726469,2026-11-02T07:29:05.072647+00:00,baseline,HIGH,80,0.7,f5bf2b63-639a-446e-9793-9c18fb3791a9,[CANARY TOUCH] MODIFY on '!00_corporate_passwords.xlsx',"[""fdd6608c-a9b7-4415-bd85-6597571d18c3"", ""42fa4669-d181-45b4-8de8-676508d71a81"", ""11a09418-535f-4653-9bea-d34580ac22b7"", ""7d37b235-a28b-45c0-9204-afd9067993ff"", ""2f15d2f5-8123-4a61-bdf3-4c37caf845d0"", ""4eaac81a-361e-41f2-be8c-5ea86b55db7f"", ""be91ecee-e19c-45a2-8a3a-1f208642ed21"", ""cebd2df8-f827-4edb-a7c5-3c26516f68a1"", ""4ccc3159-43bc-4172-8f18-78d488cf08ec"", ""9f86676c-909c-455c-934b-8530bde5cd65"", ""1f3d0241-5696-4ce5-8143-75edd8b92bb4"", ""28e73a8d-100d-40bd-9b21-f678262ab68a"", ""ff350132-7a08-4886-af6b-9fb36f230153"", ""68bdce26-d47d-4d47-9dcc-ede03ab0e78e"", ""539a6960-ea45-44ca-9d20-fe520726d9e8"", ""e2bfc3ba-eea3-4e6c-ae46-3e06ee38aaef""]","=== BASELINE DETECTOR ALERT (HIGH) ===
+Risk Score: 80/100 | Severity: HIGH
+Triggering Action: MODIFY on '!00_corporate_passwords.xlsx' (Entropy: 7.82, Size: 1024B, Canary: True)
+
+Identified Risk Factors:
+  • Abnormal file burst rate: 17 operations across 12 files in 2.0s (8.5 ops/sec)
+  • High-entropy modification detected on 1 file(s) (entropy >= 7.0)
+
+Correlated Contextual Evidence (16 events):
+  - [MODIFY] documents/user_doc_09.txt (entropy=4.42, delta_t=0.00s)
+  - [CREATE] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [CREATE] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  ... and 11 additional prior events in window.
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,baseline_canary_plus_rapid_bulk_18e328
+44c89656-60c1-4163-9e90-cf23ecaed80c,1793604542.922142,2026-11-02T07:29:02.922142+00:00,baseline,HIGH,75,0.65,fe723739-1a06-4c7d-83bb-a99333bfa324,MOVE on 'finance/archived_user_doc_01.txt',"[""49551992-2ed8-4160-9b00-2cb53b2b5e23"", ""521f250b-3f3a-4613-b698-848766b81375"", ""1dba397b-63a1-4ff5-adf9-84fcce65a5a0"", ""1fc63dc5-6672-4345-8397-5120f616f2b4"", ""bfdfe649-5ca6-4005-90a0-a3022cdf8818"", ""65d3ca42-a2ec-4ab5-8547-496b7015ed6b"", ""1a22cff3-7907-49df-b37a-54a5cf5890cd""]","=== BASELINE DETECTOR ALERT (HIGH) ===
+Risk Score: 75/100 | Severity: HIGH
+Triggering Action: MOVE on 'finance/archived_user_doc_01.txt' (Entropy: 0.00, Size: 0B, Canary: False)
+
+Identified Risk Factors:
+  • Abnormal file burst rate: 8 operations across 8 files in 2.0s (4.0 ops/sec)
+  • Mass file renaming sequence: 4 rename operations within 2.0s
+
+Correlated Contextual Evidence (7 events):
+  - [MODIFY] finance/user_doc_05.txt (entropy=0.00, delta_t=0.17s)
+  - [MOVE] finance/archived_user_doc_05.txt (entropy=0.00, delta_t=0.17s)
+  - [MODIFY] finance/user_doc_04.txt (entropy=0.00, delta_t=0.09s)
+  - [MOVE] finance/archived_user_doc_04.txt (entropy=0.00, delta_t=0.09s)
+  - [MODIFY] finance/user_doc_01.txt (entropy=0.00, delta_t=0.00s)
+  ... and 2 additional prior events in window.
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,baseline_bulk_renaming_e37edc
+fdedbdd0-ea76-4e07-a163-2b1c3f945643,1793604539.539098,2026-11-02T07:28:59.539098+00:00,hybrid,CRITICAL,100,0.98,3501af04-59bc-4711-ac27-5b1bd881b3c6,[CANARY TOUCH] MODIFY on '!00_corporate_passwords.xlsx',"[""8abe63a0-c914-405d-b700-6c8f1e8f414b"", ""75e7db81-8610-4de2-85c5-e256d3131896"", ""a1a0323a-347e-4a05-a8c4-053c3d90e5f6"", ""87fc802e-bf59-4a82-9466-e2fa02208c26"", ""d9c5034b-f716-4357-b447-c75ccb26177f"", ""e211f843-c3cb-4150-b7d8-e08511931a1c"", ""6984e455-15e4-4bb2-a1bb-ace490a8979b"", ""2134e4c6-e32b-49f5-926a-0f7095a420a1"", ""6810849f-b355-42f5-b53c-3856c22a4e9d"", ""ecaf677e-6f0b-47b6-9124-7cee3a57acd1"", ""003d9a91-3551-47fd-8e19-4c06f4c7fd3d"", ""80126423-61b7-4053-8b30-3bf8009f4191"", ""0862be45-f229-4389-8e7b-0f5faaebb09a"", ""69de050f-b002-4f9d-b10c-3d312d0b860b"", ""6b8370fb-14a4-4a4b-868a-6ab0e7e75da0"", ""6d99a439-54ff-4118-8670-17c951952ad8""]","=== HYBRID DETECTOR ALERT (CRITICAL) ===
+Risk Score: 100/100 | Severity: CRITICAL
+Triggering Action: MODIFY on '!00_corporate_passwords.xlsx' (Entropy: 7.82, Size: 1024B, Canary: True)
+
+Identified Risk Factors:
+  • Canary file breached: '!00_corporate_passwords.xlsx' (MODIFY) confirmed by contextual filesystem damage
+  • Elevated operation velocity: 170.0 ops/sec across 11 companion files
+  • Multi-file modification sequence: 16 operations across 11 files
+
+Correlated Contextual Evidence (16 events):
+  - [MODIFY] documents/user_doc_09.txt (entropy=4.42, delta_t=0.00s)
+  - [CREATE] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [CREATE] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  ... and 11 additional prior events in window.
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,hybrid_canary_plus_rapid_bulk_6cbf50
+ce0d992b-6ac9-4bfa-8416-bb652a12d62f,1793604533.741001,2026-11-02T07:28:53.741001+00:00,canary_only,HIGH,85,0.85,d97d582f-1e3e-4d8e-956a-f14f8f8d61d5,[CANARY TOUCH] MODIFY on '!00_corporate_passwords.xlsx',"[""3217eb84-0ee2-40a4-be4d-aaab220b421f"", ""ff2f9709-14da-4fd3-b2eb-a40d3fcb1b82"", ""b9ae421d-3b25-437a-87f2-64898b8a6e2d"", ""11bb330e-2ba2-4738-9782-2d51169e305d"", ""abd47007-e83d-487e-8bc5-1e008e61e2f4"", ""f7720f8d-0cf0-4344-b1e5-1a0c024f018b"", ""40538fc2-972d-4733-ba2d-1693f6742225"", ""e320f990-f9a3-4cd7-a1d0-f98892204141"", ""a47d5b8c-efa1-450f-bfb5-5099e322de20"", ""39fc8c44-395b-4ad6-a994-f96aace64878"", ""cc99a217-2c27-4cdb-839e-302775e24fe7"", ""5362fe7f-8984-440c-888a-68512725fdda"", ""37b2ecbf-1ad2-497b-854c-275e28836230"", ""239b9f64-66a4-4fa8-b188-081bcafceb05"", ""62cab768-468a-4286-8582-60934b48739b"", ""3b3f99c0-5e3d-4969-b2d9-f94aea0e8c13""]","=== CANARY_ONLY DETECTOR ALERT (HIGH) ===
+Risk Score: 85/100 | Severity: HIGH
+Triggering Action: MODIFY on '!00_corporate_passwords.xlsx' (Entropy: 7.81, Size: 1024B, Canary: True)
+
+Identified Risk Factors:
+  • Tripwire breach: Decoy canary file '!00_corporate_passwords.xlsx' received unauthorized MODIFY action
+  • Protected asset tampered with (size: 1024B, entropy: 7.81)
+
+Correlated Contextual Evidence (16 events):
+  - [MODIFY] documents/user_doc_09.txt (entropy=4.42, delta_t=0.00s)
+  - [CREATE] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [CREATE] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  ... and 11 additional prior events in window.
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,canary_only_canary_plus_rapid_bulk_3a2ab8
+15201d12-ad6e-47b2-a1e3-177b482e5ccf,1793604532.9823601,2026-11-02T07:28:52.982360+00:00,canary_only,HIGH,85,0.85,9c77c71f-b2ec-4300-a54a-54627896b798,[CANARY TOUCH] MODIFY on '!00_corporate_passwords.xlsx',[],"=== CANARY_ONLY DETECTOR ALERT (HIGH) ===
+Risk Score: 85/100 | Severity: HIGH
+Triggering Action: MODIFY on '!00_corporate_passwords.xlsx' (Entropy: 5.18, Size: 592B, Canary: True)
+
+Identified Risk Factors:
+  • Tripwire breach: Decoy canary file '!00_corporate_passwords.xlsx' received unauthorized MODIFY action
+  • Protected asset tampered with (size: 592B, entropy: 5.18)
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,canary_only_canary_touch_benign_afb74d
+d6c7afc2-909a-4d09-a538-4ecee7cca2f0,1793604529.576389,2026-11-02T07:28:49.576389+00:00,baseline,HIGH,80,0.7,1e79ef87-76dd-45db-8816-b75df1327fd8,MODIFY on 'documents/user_doc_02.txt',"[""7ad67a36-d2d2-433f-bec1-1a50a14c733a"", ""dc184b51-baa2-4c0e-b0b5-94ffec09b2ee"", ""9335ac07-0ddf-4daa-9a0a-c038250d85cc"", ""ea093bb1-9e76-4d6e-ad1e-022a64e5326f"", ""fb6f1991-36e9-4599-9a8c-305fa8e9f324""]","=== BASELINE DETECTOR ALERT (HIGH) ===
+Risk Score: 80/100 | Severity: HIGH
+Triggering Action: MODIFY on 'documents/user_doc_02.txt' (Entropy: 7.90, Size: 2048B, Canary: False)
+
+Identified Risk Factors:
+  • Abnormal file burst rate: 6 operations across 6 files in 2.0s (3.0 ops/sec)
+  • High-entropy modification detected on 6 file(s) (entropy >= 7.0)
+
+Correlated Contextual Evidence (5 events):
+  - [MODIFY] documents/user_doc_06.txt (entropy=7.91, delta_t=0.12s)
+  - [MODIFY] documents/user_doc_05.txt (entropy=7.91, delta_t=0.10s)
+  - [MODIFY] documents/user_doc_04.txt (entropy=7.92, delta_t=0.07s)
+  - [MODIFY] documents/user_doc_01.txt (entropy=7.92, delta_t=0.05s)
+  - [MODIFY] documents/user_doc_03.txt (entropy=7.90, delta_t=0.03s)
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,baseline_rapid_bulk_without_canary_56bea7
+4a060b60-fd55-4883-8c51-d1f9145b87c6,1793604528.993742,2026-11-02T07:28:48.993742+00:00,baseline,HIGH,80,0.7,903e59e2-d78c-4f57-b915-65761c00baa2,[CANARY TOUCH] MODIFY on '!00_corporate_passwords.xlsx',"[""532476d5-ff1c-4dbe-a4ed-0abd7fa06739"", ""e03f919e-ac44-4acc-a712-2d49096994eb"", ""751023c3-a7a4-4a48-a4b1-12de52f8db00"", ""8021580a-b335-4c1c-bc40-007cff90ecd7"", ""03fd4124-a128-4182-be7a-91c65defabe8"", ""6bfc42c1-170c-4dca-b891-a680d20df401"", ""e396c8f5-3aa7-4e45-a523-bb5997c382f7"", ""9a88b026-0533-4015-b9b2-beb829b256f1"", ""046863ec-a87a-4360-af3a-dc17e6952867"", ""b6b43e58-95f7-46a7-b964-fc691baa814f"", ""9929790f-aec7-430b-9459-ac0d82683a88"", ""9018beed-6501-4c74-9971-5ed5f737fc1c"", ""87def260-940b-431a-827d-7ddde5b45338"", ""a3f08ca7-e649-4ade-8f15-38e4d7acb8d6"", ""d0b34a3d-9e26-4a8f-8285-87c5f1956419"", ""4d4da0df-2dfa-4c95-a9e8-fffe76b755e1""]","=== BASELINE DETECTOR ALERT (HIGH) ===
+Risk Score: 80/100 | Severity: HIGH
+Triggering Action: MODIFY on '!00_corporate_passwords.xlsx' (Entropy: 7.77, Size: 1024B, Canary: True)
+
+Identified Risk Factors:
+  • Abnormal file burst rate: 17 operations across 12 files in 2.0s (8.5 ops/sec)
+  • High-entropy modification detected on 1 file(s) (entropy >= 7.0)
+
+Correlated Contextual Evidence (16 events):
+  - [MODIFY] documents/user_doc_09.txt (entropy=4.42, delta_t=0.00s)
+  - [CREATE] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [CREATE] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  ... and 11 additional prior events in window.
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,baseline_canary_plus_rapid_bulk_294735
+e2c4e5c6-7ae7-4aae-9ec2-83b86680328c,1793604526.803285,2026-11-02T07:28:46.803285+00:00,baseline,HIGH,75,0.65,d881c976-05a8-40b7-b79b-8cdf66e35e92,MOVE on 'finance/archived_user_doc_01.txt',"[""7d9f7179-2a79-4103-829c-63d06c4bf50a"", ""1a87b853-cc62-4899-8288-66252acf0af9"", ""859cf0a4-4108-470a-9c08-c0578c789dd3"", ""ab3a807d-6396-4469-96b6-ddba7811a141"", ""2a4f3fda-f269-4d21-80a3-7d181930e8bc"", ""96579fea-c516-41ec-8de7-8ae86200e09b"", ""d7039072-73ee-4e49-b060-167a35aa280d""]","=== BASELINE DETECTOR ALERT (HIGH) ===
+Risk Score: 75/100 | Severity: HIGH
+Triggering Action: MOVE on 'finance/archived_user_doc_01.txt' (Entropy: 0.00, Size: 0B, Canary: False)
+
+Identified Risk Factors:
+  • Abnormal file burst rate: 8 operations across 8 files in 2.0s (4.0 ops/sec)
+  • Mass file renaming sequence: 4 rename operations within 2.0s
+
+Correlated Contextual Evidence (7 events):
+  - [MODIFY] finance/user_doc_05.txt (entropy=0.00, delta_t=0.17s)
+  - [MOVE] finance/archived_user_doc_05.txt (entropy=0.00, delta_t=0.16s)
+  - [MODIFY] finance/user_doc_04.txt (entropy=0.00, delta_t=0.08s)
+  - [MOVE] finance/archived_user_doc_04.txt (entropy=0.00, delta_t=0.08s)
+  - [MODIFY] finance/user_doc_01.txt (entropy=0.00, delta_t=0.00s)
+  ... and 2 additional prior events in window.
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,baseline_bulk_renaming_9144ec
+c7c08d37-423a-47c0-b212-53329de207cd,1793604523.3898408,2026-11-02T07:28:43.389841+00:00,hybrid,CRITICAL,100,0.98,8dbc2c02-c60a-4f8f-b5bd-0701844b73e6,[CANARY TOUCH] MODIFY on '!00_corporate_passwords.xlsx',"[""62e9573e-73b3-4f8a-99e7-2405858b4052"", ""06dd154f-7b5d-482c-b197-61639ee79e77"", ""27e4a3d0-e67b-4de4-89fb-cc2497111443"", ""f008f47f-9757-45cb-8009-6bc06532d21a"", ""d552dbdb-b8be-45ae-b8f1-d1ebc7ef8e19"", ""fe4d5649-f588-4a14-8c2c-8d1418f74bca"", ""83750314-aebe-4225-80fa-3486297845e0"", ""af602e16-89a7-4caa-b4cb-15d58dce2fcd"", ""ffb9c98b-9c41-42f3-a244-7b8b981cf099"", ""23f86df6-84f2-41cb-8aa6-56927ba062db"", ""65168def-cc33-4171-a9d1-0b1aa804d036"", ""833d7dca-3caf-4467-ac3e-2c5e6cbfd7a9"", ""757feaa3-9da9-4a26-a87c-c76f42e0ee50"", ""75ed615f-e6c6-4469-832d-1bb3f262d8ca"", ""88d14e45-0964-447a-a637-187a00ed26be"", ""d28f57ee-644c-4d4f-adc3-20cd8d0f749f""]","=== HYBRID DETECTOR ALERT (CRITICAL) ===
+Risk Score: 100/100 | Severity: CRITICAL
+Triggering Action: MODIFY on '!00_corporate_passwords.xlsx' (Entropy: 7.81, Size: 1024B, Canary: True)
+
+Identified Risk Factors:
+  • Canary file breached: '!00_corporate_passwords.xlsx' (MODIFY) confirmed by contextual filesystem damage
+  • Elevated operation velocity: 170.0 ops/sec across 11 companion files
+  • Multi-file modification sequence: 16 operations across 11 files
+
+Correlated Contextual Evidence (16 events):
+  - [MODIFY] documents/user_doc_09.txt (entropy=4.42, delta_t=0.00s)
+  - [CREATE] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [CREATE] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  ... and 11 additional prior events in window.
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,hybrid_canary_plus_rapid_bulk_bd9f32
+8f9fc8ad-23ce-41c0-9dcb-46a602fc22ca,1793604517.650362,2026-11-02T07:28:37.650362+00:00,canary_only,HIGH,85,0.85,4890e8a6-d8a4-40ac-9ecf-120c40b2eafd,[CANARY TOUCH] MODIFY on '!00_corporate_passwords.xlsx',"[""7d17cb20-92f3-4862-bea4-e52b8472dea8"", ""5d1fd4a4-a1a2-40a4-be1e-61685cf5990c"", ""6d422b79-93fb-4a77-af51-d06ecb4488d5"", ""98756c3a-4e6f-4621-a72b-e74c79f85425"", ""0c98433e-86bc-468f-8b0d-633bc6f007c0"", ""9a239d8a-53a8-45f8-bc88-2c3c95d4d71c"", ""cd8ea74c-8934-4f38-b0e7-04fab5ee4d78"", ""1fae7f4a-1c45-49e5-adef-a99020c24442"", ""1ed5a760-3580-4219-9944-656cc71afb6c"", ""891b9559-ef89-4c8e-9407-a6dad23a750b"", ""a2d6ff39-d9ee-4ee4-b7bb-9cfd2e931d2f"", ""74e4634e-9532-4253-907a-bb455483409e"", ""f6944739-70a4-40e8-a2ef-c794fb1fcd77"", ""b657d135-81bb-4f07-8a0d-135d53a41098"", ""c2e61373-c363-4d04-b6c6-934a1fcb24e8"", ""66c196b3-e197-49cc-a859-722424fa87ca""]","=== CANARY_ONLY DETECTOR ALERT (HIGH) ===
+Risk Score: 85/100 | Severity: HIGH
+Triggering Action: MODIFY on '!00_corporate_passwords.xlsx' (Entropy: 7.83, Size: 1024B, Canary: True)
+
+Identified Risk Factors:
+  • Tripwire breach: Decoy canary file '!00_corporate_passwords.xlsx' received unauthorized MODIFY action
+  • Protected asset tampered with (size: 1024B, entropy: 7.83)
+
+Correlated Contextual Evidence (16 events):
+  - [MODIFY] documents/user_doc_09.txt (entropy=4.42, delta_t=0.00s)
+  - [CREATE] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [CREATE] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  ... and 11 additional prior events in window.
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,canary_only_canary_plus_rapid_bulk_0891a8
+c9ab1862-b6ca-4564-94f7-83526cf58e72,1793604516.8996422,2026-11-02T07:28:36.899642+00:00,canary_only,HIGH,85,0.85,4c919c9e-e019-4c70-81a2-7e9a724de093,[CANARY TOUCH] MODIFY on '!00_corporate_passwords.xlsx',[],"=== CANARY_ONLY DETECTOR ALERT (HIGH) ===
+Risk Score: 85/100 | Severity: HIGH
+Triggering Action: MODIFY on '!00_corporate_passwords.xlsx' (Entropy: 5.19, Size: 592B, Canary: True)
+
+Identified Risk Factors:
+  • Tripwire breach: Decoy canary file '!00_corporate_passwords.xlsx' received unauthorized MODIFY action
+  • Protected asset tampered with (size: 592B, entropy: 5.19)
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,canary_only_canary_touch_benign_9bdca3
+cfdcebfe-22df-40e2-811a-f42d32af2bfa,1793604513.460022,2026-11-02T07:28:33.460022+00:00,baseline,HIGH,80,0.7,267a3c76-83b5-46c8-a493-9f987e27f216,MODIFY on 'documents/user_doc_02.txt',"[""d05307b5-6615-4505-b698-d48c3ef83f4b"", ""63e6dce6-dbfd-4d88-bd19-6b19bee94820"", ""1cafecf4-9a89-496b-83ce-e1602c77c749"", ""a11b947f-9553-4dbf-ad32-310e36ef73da"", ""30b8a731-e3ac-4931-9480-94d5f7f846f2""]","=== BASELINE DETECTOR ALERT (HIGH) ===
+Risk Score: 80/100 | Severity: HIGH
+Triggering Action: MODIFY on 'documents/user_doc_02.txt' (Entropy: 7.90, Size: 2048B, Canary: False)
+
+Identified Risk Factors:
+  • Abnormal file burst rate: 6 operations across 6 files in 2.0s (3.0 ops/sec)
+  • High-entropy modification detected on 6 file(s) (entropy >= 7.0)
+
+Correlated Contextual Evidence (5 events):
+  - [MODIFY] documents/user_doc_06.txt (entropy=7.89, delta_t=0.12s)
+  - [MODIFY] documents/user_doc_05.txt (entropy=7.90, delta_t=0.10s)
+  - [MODIFY] documents/user_doc_04.txt (entropy=7.90, delta_t=0.07s)
+  - [MODIFY] documents/user_doc_01.txt (entropy=7.91, delta_t=0.05s)
+  - [MODIFY] documents/user_doc_03.txt (entropy=7.92, delta_t=0.03s)
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,baseline_rapid_bulk_without_canary_0f23c0
+7df6ecc0-2755-4cf6-bba2-94e7a78bf1cf,1793604512.876805,2026-11-02T07:28:32.876805+00:00,baseline,HIGH,80,0.7,979a8be8-9774-4dbe-97d3-030bd86af899,[CANARY TOUCH] MODIFY on '!00_corporate_passwords.xlsx',"[""38753e5e-fc96-437f-863f-40efb4642c52"", ""961e57b3-586e-4bff-90fd-212a42a2b9c1"", ""10d8acfa-1bfc-40ac-9c6b-65d8b5618977"", ""b85f8b9b-9a23-4d6b-80c5-06a3e64f9d1f"", ""5ec0092f-8290-4739-a396-0e2b7401ecb6"", ""391bbb56-9f84-4b09-b007-7ff79f9bbc23"", ""6493b6d7-9990-499f-952b-dd7b4121f775"", ""7d175982-40a9-4a77-96ad-e819803e31a2"", ""c3d5bdc0-7a6c-459a-8679-cc461080fff1"", ""e3e9acc3-41d1-463a-b29c-7bdbbf248e12"", ""ad709560-5c54-4f07-860a-bfb1d79a0f81"", ""fa2691cd-85c5-4db6-af07-4ff3dd35d2b4"", ""2f8101b7-246c-4cc7-a323-b3bfb4712460"", ""e97ef5fe-0787-4d11-93e8-c3b23c6c98a0"", ""0bf10b03-44f7-4bcf-aace-4f73e390044b"", ""6a88381b-8342-46eb-a094-2241469bc80f""]","=== BASELINE DETECTOR ALERT (HIGH) ===
+Risk Score: 80/100 | Severity: HIGH
+Triggering Action: MODIFY on '!00_corporate_passwords.xlsx' (Entropy: 7.81, Size: 1024B, Canary: True)
+
+Identified Risk Factors:
+  • Abnormal file burst rate: 17 operations across 12 files in 2.0s (8.5 ops/sec)
+  • High-entropy modification detected on 1 file(s) (entropy >= 7.0)
+
+Correlated Contextual Evidence (16 events):
+  - [MODIFY] documents/user_doc_09.txt (entropy=4.42, delta_t=0.00s)
+  - [CREATE] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_10.txt (entropy=4.46, delta_t=0.00s)
+  - [CREATE] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  - [MODIFY] documents/user_doc_11.txt (entropy=4.44, delta_t=0.00s)
+  ... and 11 additional prior events in window.
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,baseline_canary_plus_rapid_bulk_eb4ab4
+efd2ae8c-cfd0-434d-bf38-bf6759475595,1793604510.687687,2026-11-02T07:28:30.687687+00:00,baseline,HIGH,75,0.65,d0599835-8041-442c-931c-be593827f645,MOVE on 'finance/archived_user_doc_01.txt',"[""7b869e64-d262-46dc-9b73-8d97e30ca6f8"", ""6066b0ee-7850-44dd-88a6-219b3413d593"", ""4c5ef524-3f70-46f8-9865-796010c5e412"", ""4e2dbdba-7f82-4665-9002-4cf9d3f98969"", ""9edf7fa0-6c4c-4dca-8f0e-4a7cff0e8fbc"", ""0ef5ef53-2600-4f7a-9ee8-f5d64dfdcb0b"", ""a862a163-5bc4-44a6-91c5-d17af36385cb""]","=== BASELINE DETECTOR ALERT (HIGH) ===
+Risk Score: 75/100 | Severity: HIGH
+Triggering Action: MOVE on 'finance/archived_user_doc_01.txt' (Entropy: 0.00, Size: 0B, Canary: False)
+
+Identified Risk Factors:
+  • Abnormal file burst rate: 8 operations across 8 files in 2.0s (4.0 ops/sec)
+  • Mass file renaming sequence: 4 rename operations within 2.0s
+
+Correlated Contextual Evidence (7 events):
+  - [MODIFY] finance/user_doc_05.txt (entropy=0.00, delta_t=0.17s)
+  - [MOVE] finance/archived_user_doc_05.txt (entropy=0.00, delta_t=0.17s)
+  - [MODIFY] finance/user_doc_04.txt (entropy=0.00, delta_t=0.09s)
+  - [MOVE] finance/archived_user_doc_04.txt (entropy=0.00, delta_t=0.08s)
+  - [MODIFY] finance/user_doc_01.txt (entropy=0.00, delta_t=0.00s)
+  ... and 2 additional prior events in window.
+
+Action Recommendation: Intercept and prevent subsequent operations.",NONE,baseline_bulk_renaming_fe7673
